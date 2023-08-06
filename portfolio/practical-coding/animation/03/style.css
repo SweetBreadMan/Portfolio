@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #ffbe76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.hamburger-inner {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 300px;
+    height: 180px;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    left: 0;
+}
+.bar + .bar {
+    margin-top: 40px;
+}
+.top.in {
+    animation: bar-top-animation-in 0.7s cubic-bezier(.8, -0.49, .36, 1) forwards;
+}
+.middle.in {
+    animation: bar-middle-animation-in 0.7s cubic-bezier(.8, -0.49, .36, 1) forwards;
+}
+.bottom.in {
+    animation: bar-bottom-animation-in 0.7s cubic-bezier(.8, -0.49, .36, 1) forwards;
+}
+
+/* In Animations */
+@keyframes bar-top-animation-in {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    40% {
+        transform: translateY(70px) rotate(0deg);
+    }
+    65% {
+        transform: translateY(70px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(70px) rotate(45deg);
+    }
+}
+@keyframes bar-middle-animation-in {
+    60% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes bar-bottom-animation-in {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    40% {
+        transform: translateY(-70px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-70px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-70px) rotate(-45deg);
+    }
+}
+
+/* Out Animations */
+.top.out {
+    animation: bar-top-animation-out 0.7s cubic-bezier(.8, -0.49, .36, 1) forwards;
+}
+.middle.out {
+    animation: bar-middle-animation-out 0.7s cubic-bezier(.8, -0.49, .36, 1) forwards;
+}
+.bottom.out {
+    animation: bar-bottom-animation-out 0.7s cubic-bezier(.8, -0.49, .36, 1) forwards;
+}
+
+@keyframes bar-top-animation-out {
+    0% {
+    transform: translateY(70px) rotate(45deg);
+    }
+    40% {
+    transform: translateY(70px) rotate(0deg);
+    }
+    75% {
+    transform: translateY(70px) rotate(0deg);
+    }
+    100% {
+    transform: translateY(0) rotate(0deg);
+    }
+}@keyframes bar-middle-animation-out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes bar-bottom-animation-out {
+    0% {
+        transform: translateY(-70px) rotate(-45deg);
+    }
+    40% {
+        transform: translateY(-70px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-70px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+

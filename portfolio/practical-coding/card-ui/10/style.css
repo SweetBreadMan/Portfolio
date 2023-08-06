@@ -1,0 +1,93 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+/* Card */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.heading {
+    font-size: 38px;
+}
+.cards {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+.card {
+    flex: 1;
+    height: 400px;
+    position :relative;
+    border-radius: 10px;
+}
+.card > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    backface-visibility: hidden;
+    transition: .5s;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.7);
+}
+.card > div img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.back {
+    transform: rotateY(180deg);
+    position: relative;
+}
+.back::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.card-caption {
+    position :absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+}
+.card-caption h3 {
+    font-size: 27px;
+    margin: 0;
+}
+.card-caption p {
+    line-height: 1.5em;
+}
+.card:hover .front {
+    transform: rotateY(-180deg);
+}
+.card:hover .back {
+    transform: rotateY(0);
+}

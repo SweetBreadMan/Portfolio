@@ -1,0 +1,334 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Web Fonts : Playfair Display */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    font-weight: 300;
+    font-size: 15px;
+    color: #222;
+}
+a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #222;
+}
+/* Toggle Button */
+.toggle {
+    position: fixed;
+    cursor: pointer;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+.toggle i {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 50%;
+    transition: .3s;
+}
+.toggle.active i {
+    background-color: #fff;
+    color: #000;
+    transform: rotate(315deg);
+}
+/* overlay */
+.overlay {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: .3s;
+    z-index: 10;
+}
+.overlay.active {
+    transform: scale(130);
+}
+/* gnb */
+.gnb {
+    position: fixed;
+    z-index: 2;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 100;
+}
+.gnb.active {
+    opacity: 1;
+    visibility: visible;
+}
+.gnb a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3.5em;
+    font-weight: 400;
+    line-height: 1.6em;
+    position: relative;
+    padding-right: 20px;
+}
+.gnb a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #FF5D4C;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+.gnb a:hover::after {
+    width: 100%;
+}
+/* Common Section */
+section {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section:nth-child(even) {
+    background-color: #fff;
+}
+section:nth-child(odd) {
+    background-color: #f4f5f6;
+}
+/* Welcome Section */
+.welcome {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+.welcome:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.welcome img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    user-select: none;
+}
+.welcome h1 {
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7em;
+    font-weight: 800;
+    letter-spacing: 5px;
+    user-select: none;
+    color: #fff;
+    opacity: 1;
+    animation: load 1s ease-out;
+}
+@keyframes load {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+    50% {
+        top: 45%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+.welcome a {
+    position: absolute;
+    font-size: 50px;
+    color: #fff;
+    bottom: 10%;
+    animation: down 1s linear infinite;
+}
+@keyframes down {
+    0% {
+        bottom: 10%;
+    }
+    50% {
+        bottom: 8%;
+    }
+    100% {
+        bottom: 10%;
+    }
+}
+/* Inner */
+.inner {
+    width: 1200px;
+    display: inline-block;
+    text-align: center;
+}
+.inner .heading h1 {
+    font-size: 4em;
+    position: relative;
+    padding-bottom: 20px;
+}
+.inner .heading h1::after {
+    content: '';
+    width: 150px;
+    height: 4px;
+    position: absolute;
+    background-color: #FF5D4C;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+.heading > p {
+    font-size: 20px;
+    line-height: 1.5em;
+}
+/* Home */
+#home .inner {
+    width: 1400px;
+}
+.home-items {
+    display: flex;
+    gap: 30px;
+}
+.home-item {
+    flex: 1;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+.home-item:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #FF5D4C;
+    position: absolute;
+    transition: .3s;
+    z-index: 0;
+}
+.home-item:hover:before {
+    top: 0;
+}
+.home-image {
+    width: 120px;
+    height: 115px;
+}
+.home-image img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    filter: invert(42%) sepia(20%) saturate(2701%) hue-rotate(324deg) brightness(113%) contrast(101%);
+    transition: .1s;
+}
+.home-item:hover .home-image img {
+    filter: invert(0);
+}
+.home-item b {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: .4s;
+    z-index: 1;
+}
+.home-item p {
+    margin: 0;
+    text-align: left;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    transition: .4s;
+    z-index: 1;
+}
+.home-item:hover > b,
+.home-item:hover > p{
+    color: #fff;
+}
+/* About */
+#about .heading h1 {
+    letter-spacing: 5px;
+}
+#about .heading p {
+    font-size: 23px;
+}
+#about .heading p b {
+    font-weight: normal;
+    color: #FF5D4C;
+}
+/* Graphic */
+#graphic .inner,
+#web .inner {
+    width: 1400px;
+}
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+}
+.portfolio-item b {
+    align-self: flex-start;
+    font-size: 30px;
+    margin-top: 20px;
+    transition: .3s;
+}
+.portfolio-item:hover b {
+    color: #FF5D4C;
+}
+.portfolio-image {
+    width: 600px;
+    height: 350px;
+    overflow: hidden;
+}
+.portfolio-image img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    transition: .3s;
+}
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.2);
+}

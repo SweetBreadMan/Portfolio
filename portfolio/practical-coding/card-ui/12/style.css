@@ -1,0 +1,126 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    width: 500px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    color: #b16240;
+}
+/* Card Left */
+.card-left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+.photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border-width: 4px 0 6px 0;
+    border-style: double;
+    border-color: #f7a680;
+    position: relative;
+    z-index: 10;
+}
+.photo img {
+    width: inherit;
+    height: inherit;
+}
+h2 {
+    font-size: 22px;
+    margin: 10px 0 5px 0;
+}
+.sns {
+    margin-top: 30px;
+}
+.sns a {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 24px;
+}
+.sns a i {
+    transition: .3s;
+}
+.sns a:hover i {
+    transform: rotateY(360deg);
+}
+.sns a:hover:nth-child(1) i {
+    color: #1DA1F2;
+}
+.sns a:hover:nth-child(2) i {
+    color: #E4405F;
+}
+.sns a:hover:nth-child(3) i {
+    color: #EE1D51;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+}
+.links a {
+    margin: 10px 0;
+    font-size: 20px;
+    border: 1px solid #b16240;
+    color: #b16240;
+    border-radius: 50px;
+    padding: 10px 50px;
+    transition: .3s;
+}
+.links a:hover {
+    background-color: #b16240;
+    color: #fff;
+}
+
+/* Right */
+.card-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 3px;
+}
+.card-right > div {
+    background-color: #fac7b1;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-right > div h2 {
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.card-right > div span {
+    letter-spacing: 1px;
+    font-size: 17px;
+}

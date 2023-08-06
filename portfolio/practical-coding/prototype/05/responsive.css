@@ -1,0 +1,119 @@
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        background: none;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        position: relative;
+        width: 100%;
+    }
+    header.fixed {
+        position: fixed;
+        z-index: 100;
+        margin-top: -6%;
+    }
+    header::before{
+        background-color: #2b364b;
+        z-index: -10;
+    }
+    .logo {
+        width: 120px;
+    }
+    .logo img {
+        width: 100%;
+        height: 30px;
+        display: none;
+    }
+    .logo img.logo-res {
+        display: block;
+    }
+    nav {
+        margin-top: 10px;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+        padding: 0 20px;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+    nav ul li a {
+        line-height: 40px;
+    }
+    nav ul li:hover a {
+        background-color: #ddc067;
+        color: #000;
+    }
+    .border-top-bottom,
+    .border-left-right {
+        display: none;
+    }
+    nav .icons {
+        margin-top: 10px;
+        text-align: center;
+    }
+    nav .icons i {
+        font-size: 18px;
+        margin: 0 20px;
+    }
+    .hamburger-btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hamburger-btn i {
+        font-size: 30px;
+        color: #ddc067;
+    }
+    .hamburger-btn .fa-xmark {
+        display: none;
+        font-size: 32px;
+    }
+
+    /* Section */
+    .container {
+        display: block;
+    }
+    .container::before {
+        width: 100%;
+    }
+    .items {
+        width: 100%;
+    }
+    .up-btn {
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 10px;
+        z-index: 10000;
+        border-radius: 50%;
+        background-color: #2b364b;
+        color: #ddc067;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+    .up-btn.fixed {
+        visibility: visible;
+        opacity: 1;
+        position: fixed;
+    }
+}

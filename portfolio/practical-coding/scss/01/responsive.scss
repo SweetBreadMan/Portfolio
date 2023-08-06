@@ -1,0 +1,155 @@
+@media (max-width: 768px) {
+    body.active {
+        overflow: hidden;
+    }
+    /* Header */
+    header {
+        padding: 20px;
+        height: 300px;
+        overflow: visible;
+    }
+    .hamburger-btn {
+        display: block;
+        width: 40px;
+        height: 25px;
+        position: relative;
+        z-index: 10;
+        span {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            transition: .2s;
+            &:nth-child(1) {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 50%;
+            }
+            &:nth-child(3) {
+                width: 60%;
+                top: 100%;
+            }
+        }
+        &.active {
+            span {
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    width: 0;
+                }
+                &:nth-child(3) {
+                    width: 100%;
+                    top: 50%;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+    .header-content {
+        margin-top: 30px;
+        position: static;
+        width: 100%;
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        height: 100vh;
+        width: 0;
+        background-color: #333;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+        ul {
+            flex-direction: column;
+            gap: 70px;
+            opacity: 0;
+        }
+        &.active{
+            width: 60%;
+            ul {
+                opacity: 1;
+            }
+        }
+    }
+    .header-img {
+        display: none;
+    }
+    /* Section */
+    .items {
+        padding: 20px;
+        grid-template-areas: 'hood'
+        'shoes'
+        'hat'
+        'bag'
+        'pants';
+        grid-gap: 20px;
+        .item {
+            padding: 10px;
+            &:nth-child(1) {
+                .item-img {
+                    width: 300px;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                grid-area: hood;
+                height: auto;
+                .item-img {
+                    width: 300px;
+                    align-self: center;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                grid-area: hat;
+                .item-img {
+                    width: 300px;
+                    margin-top: 40px;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            &:nth-child(4) {
+                grid-area: bag;
+                .item-img {
+                    width: 300px;
+                    margin-right: 0;
+                    img {
+                        width: 100%;
+                        transform: scale(.7);
+                    }
+                }
+            }
+            &:nth-child(5) {
+                grid-area: pants;            .item-img {
+                    width: 300px;
+                    align-self: center;
+                    margin-top: 30px;
+                    img {
+                        width: 100%;
+                        transform: scale(.9);
+                    }
+                }
+            }
+            h3 {
+                font-size: 15px;
+            }
+        }
+    }
+}

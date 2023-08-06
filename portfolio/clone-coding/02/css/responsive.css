@@ -1,0 +1,328 @@
+@media (max-width:768px) {
+  /* ######## Common Css ######## */
+  .container {
+    position: relative;
+  }
+  .inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .desc,
+  .photo {
+    float: none;
+    width: 100%;
+    padding: 30px;
+  }
+  .desc h2 {
+    font-size: 24px;
+  }
+  .photo img {
+    width: 500px;
+  }
+  section.secure .inner .desc {
+    order: 1;
+  }
+  section.secure .inner .photo {
+    order: 2;
+  }
+  
+  /* ######## Header CSS ######## */
+  header {
+    padding: 0;
+    position: fixed;
+  }
+  .logo {
+    transform: translateY(4px);
+  }
+  .gnb {
+    display: none;
+  }
+  .download .btn-download {
+    width: 130px;
+    font-size: 13px;
+    margin-right: 10px;
+  }
+  /* Header Mobile Side Menu */
+  .hamburger {
+    display: block;
+    width: 65px;
+    height: 65px;
+    position: relative;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  .hamburger-wrapper {
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .hamburger-wrapper span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .hamburger-wrapper span:nth-child(1) {
+    top: 0;
+  }
+  .hamburger-wrapper span:nth-child(2) {
+    top: 50%;
+  }
+  .hamburger-wrapper span:nth-child(3) {
+    top: 100%;
+  }
+  .overlay {
+    visibility: visible;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+  }
+  .btn-close {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .side-menu {
+    display: block;
+    width: 75%;
+    height: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    z-index: 1000;
+    overflow: auto;
+    transition: .3s;
+  }
+  .hamburger.active~.side-menu {
+    left: 0;
+  }
+  .side-menu .logo {
+    padding: 6px 10px;
+    border-bottom: 1px solid #bbb;
+  }
+  .side-menu-content {
+    list-style: none;
+    margin: 0;
+    padding: 30px 20px;
+  }
+  .side-menu-content li {
+    margin: 0 0 10px 0;
+  }
+  .side-menu-content li a {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0;
+  }
+  .btn-dropdown {
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .btn-dropdown i {
+    font-size: 20px;
+    vertical-align: middle;
+    transition: .3s;
+  }
+  .btn-dropdown.active i {
+    transform: rotateX(180deg);
+  }
+  .side-menu-dropdown {
+    border-left: 1px solid #bbb;
+    display: none;
+  }
+  .side-menu-dropdown a {
+    display: block;
+    padding: 13px 15px;
+    margin-left: 10px;
+    color: #3c4043;
+  }
+
+  /* ######## Welcome Section ######## */
+  section.welcome {
+    height: 600px;
+  }
+  .rotate-img {
+    display: none;
+  }
+  .heading {
+    margin-top: 30px;
+    width: 100%;
+    padding: 0 35px;
+    opacity: 1;
+  }
+  .heading h1 {
+    font-size: 40px;
+    line-height: 1.1em;
+  }
+  .check {
+    display: none;
+  }
+  .welcome-img img {
+    width: 300px;
+  }
+
+  /* ######## Tools Section ######## */
+  .content {
+    overflow: hidden;
+  }
+  .tools-title {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .tools-title h2 {
+    font-size: 30px;
+    line-height: 1.2em;
+  }
+  .slide-container {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .item {
+    flex: none;
+  }
+
+  /* ######## Callaction Section ######## */
+  .callaction-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .callaction-content,
+  .callaction-img {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .callaction-content {
+    padding: 50px 60px;
+    height: auto;
+  }
+  .callaction-content a {
+    margin: auto;
+  }
+  .callaction-content h2 {
+    font-size: 30px;
+    line-height: 1.5em;
+  }
+
+  /* ######## Img Animation ######## */
+  .callaction-img img:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+    left: -16%;
+    top: 0;
+  }
+  .callaction-img.active img:nth-child(1) {
+    animation: callaction1 1s linear both;
+  }
+  @keyframes callaction1 {
+    0% {
+      top: 60%;
+      left: -90%;
+    }
+    100% {
+      left: -16%;
+      top: 0;
+    }
+  }
+  .callaction-img img:nth-child(2) {
+    position: absolute;
+    transform: rotate(45deg);
+    top: 35%;
+    left: 40%;
+  }
+  .callaction-img.active img:nth-child(2) {
+    animation: callaction2 1s linear both;
+  }
+  @keyframes callaction2 {
+    0% {
+      top: 70%;
+      left: 100%;
+    }
+    100% {
+      top: 35%;
+      left: 40%;
+    }
+  }
+  .callaction-img img:nth-child(3) {
+    display: none;
+  }
+
+  /* ######## Footer CSS ######## */
+  /* Footer SNS */
+  .footer-inner {
+    width: 100%;
+  }
+  .sns-outer {
+    padding-left: 20px;
+  }
+  .sns b {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .sns a {
+    margin: 0;
+    margin-right: 10px;
+  }
+  /* Footer sitemap */
+  .sitemap {
+    height: auto;
+    border-bottom: none;
+  }
+  .link-item {
+    float: none;
+    width: 100%;
+    padding: 20px;
+  }
+  .link-item-title {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    position: relative;
+  }
+  .link-item-title::after {
+    content: '\e942';
+    font-family: xeicon;
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    transition: .4s;
+  }
+  .link-item-title.active::after {
+    transform: rotate(-180deg)
+  }
+  .link-item-content {
+    display: none;
+  }
+  /* Copyright */
+  .copyright {
+    padding: 0 20px;
+  }
+  .copyright-inner {
+    display: block;
+  }
+  .policy {
+    margin-bottom: 30px;
+  }
+  .policy li {
+    margin-bottom: 10px;
+  }
+  .language select {
+    margin-top: 15px;
+    display: block;
+  }
+}

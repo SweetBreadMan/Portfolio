@@ -1,0 +1,141 @@
+@media (max-width:768px) {
+  /* ######## Header CSS ######## */
+  header {
+    padding: 30px 20px;
+  }
+  .logo img {
+    width: 130px;
+  }
+  
+  /* ######## Welcome Section ######## */
+  .welcome {
+    height: 100vh;
+  }
+  .heading {
+    width: 100%;
+  }
+  .heading h1 {
+    font-size: 35px;
+  }
+  .heading h2 {
+    font-size: 20px;
+  }
+  .heading h3 {
+    font-size: 16px;
+    line-height: 1.1em;
+    font-weight: normal;
+  }
+  input[type=email] {
+    width: 100%;
+  }
+  .getstarted input[type=email] {
+    width: 350px;
+  }
+  .getstarted input[type=email]+label {
+    left: 30px;
+    top: 9px;
+  }
+
+  /* ######## Sections CSS ######## */
+  .enjoy,
+  .download,
+  .watch,
+  .kids {
+    height: auto;
+  }
+  .inner {
+    width: 100%;
+    position: static;
+    transform: translate(0);
+    text-align: center;
+  }
+  .desc {
+    padding: 0 20px;
+  }
+  .desc h1 {
+    font-size: 35px;
+  }
+  .desc h2 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .desc,
+  .preview {
+    width: 100%;
+  }
+  .download .inner,
+  .kids .inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .download .inner .desc,
+  .kids .inner .desc {
+    order: 1;
+  }
+  .download .inner .preview,
+  .kids .inner .preview {
+    order: 2;
+  }
+  .preview img {
+    width: 400px;
+    height: auto;
+  }
+
+  /* ######## FaQ Section ######## */
+  .faq-inner {
+    width: 100%;
+  }
+  .faq-inner h1 {
+    font-size: 40px;
+  }
+  .faq-inner h3 {
+    font-size: 16px;
+    line-height: 1.1em;
+    font-weight: normal;
+    padding: 0 20px;
+  }
+  .accordion {
+    padding: 0 20px;
+  }
+  .faq-title {
+    font-size: 18px;
+    margin-bottom: 3px;
+    height: 50px;
+  }
+  .faq-title i {
+    font-size: 18px;
+    top: 16px;
+  }
+  .faq-content {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 300;
+  }
+  .faq-inner .getstarted {
+    margin-bottom: 30px;
+    position: relative;
+  }
+  /* ######## Footer Part ######## */
+  .footer-inner {
+    width: 100%;
+    text-align: center;
+  }
+  .items {
+    width: 48%;
+    line-height: 1.6em;
+  }
+  .copyright p {
+    font-size: 13px;
+    line-height: 1.3em;
+    padding: 0 10px;
+  }
+  /* ######## Modal Overlay ######## */
+  .login-modal {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+  .login-modal p {
+    line-height: 1.3em;
+  }
+}

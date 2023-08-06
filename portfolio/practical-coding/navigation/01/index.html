@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hamburger 내비게이션</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="main-text">
+            travel child
+        </div>
+        <div class="sub-text">
+            EXPLORE THE WORLD
+        </div>
+        <div class="overlay">
+            <div class="logo-wrapper">
+                travel child
+            </div>
+            <div class="sidebar-nav">
+                <a href="#none"><span></span>ARCHITECTURE</a>
+                <a href="#none">VIDEO</a>
+                <a href="#none">TEAM</a>
+                <a href="#none">PRESS</a>
+                <a href="#none">CONTACT</a>
+                <a href="#none">LEGAL</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.hamburger').click(function(){
+            $('.hamburger').toggleClass('active');
+            $('.overlay').toggleClass('active');
+        })
+    </script>
+</body>
+</html>

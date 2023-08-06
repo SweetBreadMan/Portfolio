@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6em;
+}
+.container {
+    border: 1px solid transparent;
+}
+header {
+    height: 100px;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+.gnb {
+    margin-right: auto;
+    margin-left: 50px;
+    display: flex;
+    gap: 20px;
+}
+.gnb a {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    padding: 30px 20px;
+    position: relative;
+}
+.gnb a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #000;
+    transition: .3s;
+}
+.gnb a:hover:after {
+    width: 100%;
+}
+section {
+    height: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+}
+section:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+section:nth-of-type(1) {
+    background: url(images/section-01.jpg) center center no-repeat;
+    margin-top: 100px;
+}
+section:nth-of-type(2) {
+    background: url(images/section-02.jpg) center center no-repeat;
+}
+section h1,
+section p {
+    position: relative;
+}
+section h1 {
+    font-size: 3em;
+}
+section p {
+    font-size: 25px;
+}
+
+/* Seach input */
+.search {
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px 50px 50px 50px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+.search.active {
+    width: 400px;
+}
+.clear {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    cursor: pointer;
+}
+.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 54px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.input-frame {
+    position: absolute;
+    top: 11px;
+    left: 60px;
+
+}
+.input-frame input[type=text] {
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+input[type=text]::placeholder {
+    transition: .3s;
+}
+input[type=text]:focus::placeholder {
+    opacity: 0;
+}

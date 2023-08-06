@@ -1,0 +1,321 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* Reset CSS */
+:root {
+  --button-color: #E50914;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  line-height: 1.6em;
+  font-size: 26px;
+}
+body.scroll-block {
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+
+/* ######## Sections CSS ######## */
+.enjoy,
+.download,
+.watch,
+.kids {
+  height: 500px;
+}
+.inner {
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.desc,
+.preview {
+  float: left;
+  width: 50%;
+}
+.desc {
+  padding-top: 50px;
+}
+.desc h1 {
+  font-size: 50px;
+  line-height: 1.1em;
+}
+.desc h2 {
+  font-size: 26px;
+  font-weight: normal;
+}
+.preview {
+  text-align: center;
+}
+.preview img {
+  height: 380px;
+}
+
+/* ######## Header CSS ######## */
+header {
+  padding: 30px 50px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+/* ######## Common Section ######## */
+section {
+  border-bottom: 10px solid #222222;
+  position: relative;
+}
+.logo img {
+  width: 170px;
+  float: left;
+}
+.signin {
+  float: right;
+}
+.signin button {
+  background-color: var(--button-color);
+  border: none;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ######## Welcome Section ######## */
+.welcome {
+  background: url(images/Welcome-bg.jpg) no-repeat center center /cover;
+  height: 80vh;
+  position: relative;
+}
+.welcome::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.heading {
+  width: 900px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.heading h1 {
+  font-size: 70px;
+  line-height: 1.1em;
+  margin: 0;
+}
+.heading h2 {
+  font-size: 26px;
+}
+.heading h3 {
+  font-size: 19px;
+}
+.getstarted {
+  position: relative;
+  display: inline-block;
+}
+input[type=email],
+.getstarted button {
+  height: 60px;
+  vertical-align: middle;
+}
+.getstarted input[type=email] {
+  width: 500px;
+  padding-left: 10px;
+}
+.getstarted input[type=email]+label {
+  position: absolute;
+  color: #ccc;
+  left: 10px;
+  top: 9px;
+  font-size: 16px;
+  transition: .3s;
+}
+.getstarted input[type=email]:focus+label {
+  top: -10px;
+  font-weight: bold;
+  font-size: 13px;
+}
+.getstarted button {
+  width: 150px;
+  border: none;
+  font-size: 20px;
+  background-color: var(--button-color);
+  color: #fff;
+  cursor: pointer;
+}
+.getstarted button:hover {
+  background-color: #e21a24;
+}
+.getstarted button:active {
+  background-color: #ac141c
+}
+
+/* ######## FaQ Section ######## */
+.faq-inner {
+  width: 800px;
+  margin: auto;
+  margin-top: 80px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.faq-inner h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.faq-inner h3 {
+  margin-top: 40px;
+  font-size: 18px;
+}
+.faq-title {
+  border: none;
+  width: 100%;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 26px;
+  height: 70px;
+  margin-bottom: 3px;
+  position: relative;
+  cursor: pointer;
+}
+.faq-title i {
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  font-size: 26px;
+}
+.faq-content {
+  background-color: #555;
+  margin-bottom: 13px;
+  display: none;
+}
+.faq-content p {
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+}
+
+/* ######## Footer CSS ######## */
+footer {
+  font-size: 16px;
+  color: #757575;
+}
+footer a {
+  color: #757575;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+.footer-inner {
+  width: 850px;
+  margin: auto;
+}
+.sitemap {
+  overflow: hidden;
+  border-bottom: 1px solid #666;
+  padding-bottom: 20px;
+}
+.items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 24%;
+}
+.items a {
+  font-size: 14px;
+}
+.copyright p {
+  line-height: 1.1em;
+}
+
+/* ######## Modal Overlay ######## */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  display: none;
+}
+.login-modal {
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 50px;
+  font-size: 16px;
+  color: #555;
+  border-radius: 5px;
+}
+.login-modal i {
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #777;
+}
+.login-modal h2 {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 0;
+}
+.login-modal input[type=email],
+.login-modal input[type=password],
+.login-modal button {
+  width: 100%;
+  height: 60px;
+  border: none;
+  outline: none;
+  margin: 10px 0;
+  background-color: #333;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+.login-modal button {
+  background-color: var(--button-color);
+  cursor: pointer;
+}
+.login-modal a {
+  color: #fff;
+}
+.login-modal a:hover {
+  text-decoration: underline;
+}
+.login-modal p a {
+  color: royalblue;
+}
+.save-info {
+  overflow: hidden;
+  margin-top: 10px;
+}
+.save-info label {
+  float: left;
+}
+.save-info a {
+  float: right;
+}

@@ -1,0 +1,90 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #a5b1c2;
+}
+.frame {
+    display: flex;
+    gap: 40px;
+}
+.hexagon {
+    width: 400px;
+    height: 450px;
+    position: relative;
+}
+.shape {
+    width: inherit;
+    height: inherit;
+    clip-path: polygon(0 26%, 50% 0, 100% 28%, 100% 75%, 50% 100%, 0 80%);
+    position: absolute;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.shape img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+.hexagon .caption {
+    width: inherit;
+    height: inherit;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: 0.3s;
+}
+.shape:hover .caption {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.shape:hover {
+    transform: translateY(-40px);
+}
+.hexagon .caption h2 {
+    font-size: 2em;
+}
+.hexagon:nth-child(1) .caption {
+    /* background: linear-gradient(to top, #20bf6b 2%, transparent); */
+    background-image: linear-gradient(to top, #99d8f5 5%, transparent);
+}
+.hexagon:nth-child(2) .caption {
+    /* background: linear-gradient(to top, dodgerblue, transparent); */
+    background-image: linear-gradient(to top, #0984e3 5%, transparent);
+}
+.hexagon:nth-child(3) .caption {
+    /* background: linear-gradient(to top, yellowgreen, transparent); */
+    background-image: linear-gradient(to top, #e2c58b 5%, transparent);
+}
+
+.hexagon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    background: radial-gradient(rgba(0, 0, 0, 0.3), transparent, transparent);
+    bottom: -70px;
+    transition: 0.5s;
+}
+.hexagon:hover::before {
+    opacity: 0.6;
+    transform: scale(0.8);
+}

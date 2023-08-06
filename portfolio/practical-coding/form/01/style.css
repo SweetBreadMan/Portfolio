@@ -1,0 +1,298 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6em;
+    color: #222;
+    background: url(images/background.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Login Form */
+.login {
+    width:400px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 30px 50px;
+    box-sizing: border-box;
+}
+.login h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+    font-weight: 500;
+}
+.login .field {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: -6px;
+    margin-top: 15px;
+}
+/* Email & Password input */
+input[type=email],
+input[type=password] {
+    width: 90%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-left: 30px;
+}
+input[type=email] {
+    background: #fff url(images/icon-user.png) no-repeat center left 2px;
+}
+input[type=password] {
+    background: #fff url(images/icon-password.png) no-repeat center left 2px;
+}
+input[type=email]::placeholder,
+input[type=password]::placeholder {
+    color: #ccc;
+    transition: .3s;
+}
+input[type=email]:focus::placeholder,
+input[type=password]:focus::placeholder {
+    opacity: 0;
+    visibility: hidden;
+}
+/* Save info */
+.save-info {
+    margin-top: 15px;
+}
+.save-info input[type=checkbox] {
+    float: left;
+}
+.save-info a {
+    float: right;
+}
+.save-info a:hover {
+    text-decoration: underline;
+}
+/* Event info */
+.event-info {
+    margin: 20px 0;
+    text-align: center;
+}
+.event-info .choose label {
+    margin: 5px;
+}
+/* Login Button */
+.login input[type=button] {
+    display: block;
+    margin: auto;
+    width: 90%;
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+.login input[type=button]:hover {
+    background-image: linear-gradient(to top, #088650 0%, #319e7b 100%);
+}
+/* SNS Login */
+.sns {
+    text-align: center;
+    margin-top: 25px;
+}
+.sns .icons {
+    padding-top: 10px;
+}
+.sns .icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 53px;
+    font-size: 25px;
+    border-radius: 50%;
+    color: #fff;
+    margin: 3px;
+}
+.icons a:nth-child(1) {
+    background-color: #E95835;
+}
+.icons a:nth-child(2) {
+    background-color: #4267B2;
+}
+.icons a:nth-child(3) {
+    background-color: #00A300;
+}
+.icons a:nth-child(4) {
+    background-color: #FFD305;
+}
+/* Sign Up part */
+.signup-info {
+    text-align: center;
+    margin-top: 30px;
+}
+.signup-info a {
+    display: block;
+    font-weight: bold;
+}
+.signup-info a:hover {
+    text-decoration: underline;
+}
+/* Custom Checkbox & Radio */
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox] + em {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(images/icon-checkbox.png);
+    margin-right: 3px;
+    transform: translateY(4px);
+}
+input[type=checkbox]:checked + em {
+    background-position: right;
+}
+input[type=radio] {
+    display: none;
+}
+input[type=radio] + em {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(images/icon-radio.png);
+    margin-right: 3px;
+    transform: translateY(5px);
+}
+input[type=radio]:checked + em {
+    background-position: right;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    /* login */
+    .login {
+        width: 100%;
+        height: auto;
+        position: static;
+        transform: translate(0,0);
+        padding: 20px;
+    }
+    .login h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .login .field {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    input[type="email"] {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    input[type="password"] {
+        font-size: 18px;
+    }
+    input[type=email] {
+        background: #fff url(images/icon-user.png) no-repeat center left 2px;
+        background-size: 25px;
+    }
+    input[type=password] {
+        background: #fff url(images/icon-password.png) no-repeat center left 2px;
+        background-size: 25px;
+    }
+
+    /* save-info */
+    .save-info {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    .save-info input[type=checkbox] {
+        float: none;
+    }
+    .save-info label {
+        display: block;
+        margin-bottom: 20px;
+        display: flex;
+    }
+    .save-info a {
+        float: none;
+        text-decoration: underline;
+    }
+    .save-info a:hover {
+        text-decoration: underline;
+    }
+    input[type=checkbox] + em {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #000;
+        background: none;
+        margin-right: 10px;
+        position: relative;
+    }
+    input[type=checkbox]:checked + em:after {
+        content: '✔';
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #1BBE93;
+    }
+
+    /* event-info */
+    .event-info {
+        margin-top: 30px;
+    }
+    .event-info > span {
+        font-size: 20px;
+    }
+    .choose {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .choose label {
+        font-size: 20px;
+    }
+
+    /* Login Button */
+    .login input[type=button] {
+        padding: 10px 0;
+        font-size: 23px;
+    }
+
+    /* SNS Login */
+    .sns .icons a {
+        margin-right: 10px;
+    }
+
+    /* Sign Up part */
+    .signup-info {
+        font-size: 18px;
+    }
+    .signup-info a {
+        text-decoration: underline;
+    }
+}

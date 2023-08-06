@@ -1,0 +1,95 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+body {
+    font-family: 'Raleway', sans-serif;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+a.nav1,
+a.nav2,
+a.nav3,
+a.nav4,
+a.nav5 {
+    text-decoration: none;
+    color: #000;
+    font-size: 40px;
+    position: relative;
+    padding-bottom: 10px;
+    display: block;
+    margin-bottom: 50px;
+}
+a.nav1:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #3c40c6;
+    height: 2px;
+    width: 0;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+a.nav1:hover:before {
+    width: 100%;
+}
+a.nav2:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #3c40c6;
+    height: 2px;
+    width: 0;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+a.nav2:hover:before {
+    width: 100%;
+}
+a.nav3:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+    background-color: #3c40c6;
+    height: 5px;
+    width: 5px;
+    transition: 0.5s;
+}
+a.nav3:hover:before {
+    left: 100%;
+}
+a.nav4:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: #3c40c6;
+    height: 2px;
+    width: 0;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+a.nav4:hover:before {
+    width: 100%;
+}
+a.nav5:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: #3c40c6;
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+a.nav5:hover:before {
+    width: 0;
+}

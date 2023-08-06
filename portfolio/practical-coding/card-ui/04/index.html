@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light & Dark Mode Profile Card</title>
+    <!-- Fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/6fe22f7640.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="card-inner">
+                <div class="card">
+                    <div class="photo">
+                        <img src="images/background-01.jpg">
+                    </div>
+                    <div class="card-caption">
+                        <img src="images/profile-01.jpg">
+                        <h2>Danial</h2>
+                        <span>Engineer</span>
+                        <p>
+                            Engineers develop new technological solutions. During the engineering design process, the responsibilities of the engineer may include defining problems.
+                        </p>
+                        <div class="links">
+                            <a href="#none">follow</a>
+                            <a href="#none">more info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="photo">
+                        <img src="images/background-02.jpg">
+                    </div>
+                    <div class="card-caption">
+                        <img src="images/profile-02.jpg">
+                        <h2>Rebecca</h2>
+                        <span>Lawyer</span>
+                        <p>
+                            Different legal jurisdictions have different requirements in the determination of who is recognized as being a lawyer.
+                        </p>
+                        <div class="links">
+                            <a href="#none">follow</a>
+                            <a href="#none">more info</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="photo">
+                        <img src="images/background-03.jpg">
+                    </div>
+                    <div class="card-caption">
+                        <img src="images/profile-03.jpg">
+                        <h2>Felix</h2>
+                        <span>Photographer</span>
+                        <p>
+                            There are always two people in every picture: the photographer and the viewer.
+                        </p>
+                        <div class="links">
+                            <a href="#none">follow</a>
+                            <a href="#none">more info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="switch"></div>
+    </div>
+
+    <script>
+        $('.switch').click(function(){
+            $('body').toggleClass('dark');
+            $('.switch').toggleClass('active');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커스텀 로그인 폼</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="custom.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="photo">
+                <div class="logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <div class="sign-tabs">
+                    <span class="signin-tab active">sign in</span>
+                    <span class="signup-tab">sign up</span>
+                </div>
+            </div>
+            <div class="content-inner">
+                <!-- Signin -->
+                <div class="sign-inner signin-inner">
+                    <form action="#none" class="sign-form signin-form">
+                        <div class="form-field">
+                            <input type="email" id="inputEmail" required>
+                            <label for="inputEmail">Email</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="password" id="inputPassword" required>
+                            <label for="inputPassword">Password</label>
+                        </div>
+                        <div class="forgot-link">
+                            <a href="#none">Forgot Password?</a>
+                        </div>
+                        <div class="keep-signin">
+                            <input type="checkbox" id="keep-sigin-check">
+                            <label for="keep-sigin-check">Keep me Signed In</label>
+                        </div>
+                        <div class="sign-button signin-button">
+                            <button>sign in</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Signup -->
+                <div class="sign-inner signup-inner">
+                    <form action="#none" class="sign-form signup-form">
+                        <div class="flex-row">
+                            <div class="form-field">
+                                <input type="text" id="inputFirstname" required>
+                                <label for="inputFirstname">First Name</label>
+                            </div>
+                            <div class="form-field">
+                                <input type="text" id="inputLastname" required>
+                                <label for="inputLastname">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <input type="email" id="inputEmail" required>
+                            <label for="inputEmail">Email</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="password" id="inputPassword" required>
+                            <label for="inputPassword">Password</label>
+                        </div>
+                        <div class="sign-button signup-button">
+                            <button>sign up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

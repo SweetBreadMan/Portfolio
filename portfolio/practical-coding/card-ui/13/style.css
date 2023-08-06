@@ -1,0 +1,135 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #fff;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    font-family: 'Ubuntu', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap :40px;
+}
+.heading {
+    margin: 0;
+    letter-spacing: 1px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+/* Card */
+.card {
+    width: 450px;
+    height: 300px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+.photo {
+    width: inherit;
+    height: inherit;
+}
+.photo img {
+    width: inherit;
+    height: inherit;
+    transition: .2s;
+}
+.card:hover img {
+    filter: blur(1px);
+}
+/* Overlay */
+.card-overlay {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    bottom: 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+.card-overlay em {
+    color: #333;
+    float: right;
+    padding-right: 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.social-overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: -40%;
+    left: -20%;
+    width: 50%;
+    height: 150%;
+    transform: rotate(-20deg) translateX(-100%);
+    transition: .4s;
+    z-index: 10;
+}
+.card:hover .social-overlay {
+    left: 40%;
+}
+/* Social */
+.social {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: -20%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: .4s;
+    z-index: 11;
+}
+.card:hover .social {
+    left: 0;
+}
+.social li {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+.social li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+.social li a:hover {
+    width: 120%;
+}
+.social li:nth-child(1) a {
+    background-color: #3b5998;
+}
+.social li:nth-child(2) a {
+    background-color: #1da1f2;
+}
+.social li:nth-child(3) a {
+    background-color: #dd4b39;
+}
+.social li:nth-child(4) a {
+    background-color: #e1306c;
+}
+.social li:nth-child(5) a {
+    background-color: #bd081c;
+}

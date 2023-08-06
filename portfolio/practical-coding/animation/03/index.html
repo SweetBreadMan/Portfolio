@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Animation</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="hamburger-inner">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+    </button>
+
+    <script>
+        $('.hamburger-inner').click(function(){
+            if($(this).children('span').hasClass('in')){
+                $(this).children('span').removeClass('in');
+                $(this).children('span').addClass('out');
+            } else {
+                $(this).children('span').addClass('in')
+                $(this).children('span').removeClass('out');
+            }
+        })
+    </script>
+</body>
+</html>

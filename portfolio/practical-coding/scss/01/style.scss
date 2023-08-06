@@ -1,0 +1,234 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+// Variables
+$header-font: 'Poppins', sans-serif;
+$nav-font: 'Kanit', sans-serif;
+$item-font: 'Lato', sans-serif;
+$primary-bgc: #00a383;
+$item-bgc: #f1f1f1;
+$gray-font-color: #555;
+
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Header */
+header {
+    font-family: $header-font;
+    background-color: $primary-bgc;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+.hamburger-btn {
+    display: none;
+}
+.header-content {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 20%;
+    color: #fff;
+    h1 {
+        font-size: 70px;
+        margin: 0;
+        line-height: 1.1em;
+        font-weight: 600;
+    }
+    p {
+        font-size: 22px;
+        line-height: 1.5em;
+    }
+}
+.navbar {
+    display: flex;
+    justify-content: end;
+    margin: 25px 100px 0 0;
+    position: relative;
+    z-index: 1;
+    ul {
+        display: flex;
+        gap: 150px;
+        font-size: 23px;
+        li {
+            text-align: center;
+            &:hover a::after {
+                width: 100%;
+            }
+            a {
+                display: inline-block;
+                width: 100%;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 3px;
+                    background-color: #fff;
+                    bottom: -2px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: .2s;
+                }
+            }
+        }
+    }
+}
+.header-img {
+    position: absolute;
+    right: 14%;
+    bottom: -9%;
+    width: 600px;
+    height: 500px;
+    opacity: 1;
+    animation: header-img-opacity 1.3s linear;
+    img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+    }
+}
+@keyframes header-img-opacity {
+    0% {
+        opacity: 0;
+        right: 8%;
+    }
+    20% {
+        opacity: 0;
+        right: 10%;
+    }
+    40% {
+        opacity: 0;
+        right: 11%;
+    }
+    60% {
+        opacity: 1;
+        right: 12%;
+    }
+    80% {
+        opacity: 1;
+        right: 13%;
+    }
+    100% {
+        opacity: 1;
+        right: 14%;
+    }
+
+}
+/* Section */
+.items {
+    padding: 40px 50px;
+    margin: auto;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-areas: 'shoes hood hat'
+                        'bag hood pants'
+                        '. . pants';
+    .item {
+        background-color: $item-bgc;
+        padding: 40px;
+        color: $gray-font-color;
+        text-transform: uppercase;
+        font-family: $item-font;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        transition: .3s;
+        &:hover {
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.009);
+        }
+        .item-img {
+            align-self: end;
+        }
+        &:nth-child(1) {
+            grid-area: shoes;
+            .item-img {
+                width: 350px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &:nth-child(2) {
+            grid-area: hood;
+            height: 600px;
+            .item-img {
+                width: 400px;
+                align-self: center;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &:nth-child(3) {
+            grid-area: hat;
+            .item-img {
+                width: 300px;
+                margin-top: 40px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &:nth-child(4) {
+            grid-area: bag;
+            .item-img {
+                width: 250px;
+                margin-right: 50px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &:nth-child(5) {
+            grid-area: pants;            .item-img {
+                width: 350px;
+                align-self: center;
+                margin-top: 30px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        h3 {
+            position:relative;
+            margin: 0;
+            letter-spacing: 2px;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 10%;
+                height: 1px;
+                background-color: $gray-font-color;
+                left: 0;
+                bottom: -10px;
+            }
+        }
+        .price {
+            display: inline-block;
+            margin-top: 25px;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}

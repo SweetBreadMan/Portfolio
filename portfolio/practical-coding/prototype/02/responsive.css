@@ -1,0 +1,55 @@
+@media (max-width: 768px) {
+    .gnb{
+        width: 100%;
+        text-align: center;
+    }
+    .gnb a {
+        font-size: 2.5em;
+        line-height: 2em;
+    }
+    section:not(.welcome) {
+        height: auto;
+        padding: 20px;
+    }
+    section .inner .heading b {
+        font-size: 16px;
+    }
+    section .inner .heading h1 {
+        font-size: 2.4em;
+    }
+    /* Welcome */
+    .welcome h1 {
+        text-align: left;
+        padding-left: 20px;
+        font-size: 5em;
+    }
+    /* Home */
+    #home .inner {
+        width: 100%;
+    }
+    .home-items {
+        flex-direction: column;
+    }
+    .home-item {
+        align-items: center;
+    }
+    .home-item p {
+        text-align: center;
+    }
+    /* Graphic */
+    #graphic .inner,
+    #web .inner {
+        width: 100%;
+    }
+    .portfolio-items {
+        gap: 50px;
+    }
+    .portfolio-image {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+    }
+    .portfolio-item b {
+        align-self: center;
+    }
+}

@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+.gnb {
+    background-color: #eee;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+.gnb a {
+    flex: 1;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.gnb a::before,
+.gnb a::after {
+    content: attr(data-link);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .2s;
+}
+.gnb a::before {
+    top: 0;
+    left: 0;
+}
+.gnb a::after {
+    top: 100%;
+    left: 0;
+    color: #45B649;
+}
+.gnb a:hover::before {
+    top: -100%;
+}
+.gnb a:hover::after {
+    top: 0;
+}

@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.icons {
+  color: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+}
+.icons li input[name=check-item] {
+  display: none;
+}
+.icons li input[name=check-item]:checked + div {
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 63, 52, 0.5), 0 0 1.500150015px rgba(255, 63, 52, 0.5), 0 0 20px rgba(255, 63, 52, 0.5), inset 0 0 0 3.0000300003px #ff3f34;
+}
+.icons li input[name=check-item]:checked + div span {
+  text-shadow: 0 0 10px #ff3f34, 0 0 1.500150015px #ff3f34, 0 0 20px #ff3f34;
+}
+.icons li label {
+  cursor: pointer;
+}
+.icons li label div {
+  border: 3.0000300003px solid #333;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #111;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.icons li label div span {
+  font-size: 50px;
+  transition: 0.3s;
+}

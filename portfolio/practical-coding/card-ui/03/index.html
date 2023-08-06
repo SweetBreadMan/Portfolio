@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- XEION CDN -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<body>
+    <div class="frame">
+        <div class="profile">
+            <div class="face">
+                <img src="images/profile.jpg" alt="">
+            </div>
+            <h2>Andrew<span>Web Publisher</span></h2>
+            <p>
+                I'm a web publisher, Andrew. I'm looking forward to a good project.
+                <span>andrew@helloworld.com</span>
+            </p>
+            <a href="#none" class="view-btn">view my portfolio</a>
+            <div class="sns">
+                <div>
+                    <i class="xi-instagram"></i>
+                    <b>15.6k<span>followers</span></b>
+                </div>
+                <div>
+                    <i class="xi-facebook"></i>
+                    <b>12.9k<span>followers</span></b>
+                </div>
+                <div>
+                    <i class="xi-twitter"></i>
+                    <b>10.2k<span>followers</span></b>
+                </div>
+            </div>
+            <div class="btn-mode"></div>
+            <div class="like-more">
+                <span class="btn-like"></span>
+                <span class="btn-more">
+                    <i class="xi-ellipsis-v"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.btn-mode').click(function(){
+            $('body').toggleClass('dark');
+            $('.profile').toggleClass('dark');
+        })
+        $('.btn-like').click(function(){
+            $(this).toggleClass('active');
+        })
+    </script>
+</body>
+</html>

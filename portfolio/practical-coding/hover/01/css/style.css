@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #5e97dd;
+}
+.app-ui {
+    width: 360px;
+    height: 640px;
+    position: relative;
+    transform: rotate(-30deg) skewX(20deg) scale(0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.507);
+    transition: 0.5s;
+    background-color: rgb(48, 93, 148);
+    cursor: pointer;
+}
+.app-ui:hover {
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.589);
+}
+.app-ui img {
+    position: absolute;
+    transition: 0.5s;
+    width: 360px;
+    height: 640px;
+}
+.app-ui:hover img:nth-child(1) {
+    transform: translate(40px, -40px);
+    opacity: 0.4;
+}
+.app-ui:hover img:nth-child(2) {
+    transform: translate(80px, -80px);
+    opacity: 0.6;
+}
+.app-ui:hover img:nth-child(3) {
+    transform: translate(120px, -120px);
+    opacity: 0.8;
+}
+.app-ui:hover img:nth-child(4) {
+    transform: translate(160px, -160px);
+}

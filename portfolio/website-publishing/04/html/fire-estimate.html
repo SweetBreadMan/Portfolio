@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이(J)소방 주식회사 : 소방안전관리 | 소방견적 의뢰</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../images/favicon.png">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- AOS CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Email JS CDN -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!-- Custom CSS & JS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive-tablet.css">
+  <link rel="stylesheet" href="../css/responsive-mobile.css">
+  <script src="../script/custom.js"></script>
+  <script src="../script/fire-estimate-mail.js"></script>
+</head>
+<body>
+  <div class="container estimate">
+    <!-- Header -->
+    <div class="header-include"></div>
+    <!-- Content Start -->
+    <div class="content">
+      <!-- Section: Title -->
+      <section class="title">
+        <div class="title-inner">
+          <h2 data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true">견적·신청·모집</h2>
+        </div>
+      </section>
+      <!-- Section: Fire Estimate -->
+      <section class="fire-estimate">
+        <div class="fire-estimate-inner">
+          <div class="items-headline">
+            <h3>소방견적 의뢰</h3>
+          </div>
+          <div class="fire-estimate-items">
+            <div class="form-headline">
+              <h5>견적의뢰가 접수되는 데로 바로 연락드리겠습니다. 고객센터 031-269-2119</h5>
+            </div>
+            <!-- Form -->
+            <form action="" class="mail-form fire-estimate-form">
+              <div class="input-field">
+                <label for="subject">
+                  <span>제목 <b>*</b></span>
+                  <input type="text" name="subject" id="subject" required>
+                </label>
+              </div>
+              <div class="input-field row-field">
+                <div>
+                  <label for="company">
+                    <span>업체명 <b>*</b></span>
+                    <input type="text" name="company" id="company" required>
+                  </label>
+                </div>
+                <div>
+                  <label for="manager">
+                    <span>담당자명 <b>*</b></span>
+                    <input type="text" name="manager" id="manager" required>
+                  </label>
+                </div>
+              </div>
+              <div class="input-field row-field">
+                <div>
+                  <label for="tel">
+                    <span>연락처 <b>*</b></span>
+                    <input type="tel" name="tel" id="tel" required>
+                  </label>
+                </div>
+                <div>
+                  <label for="building">
+                    <span>건물명</span>
+                    <input type="text" name="building" id="building">
+                  </label>
+                </div>
+              </div>
+              <div class="input-field row-field">
+                <div>
+                  <label for="email">
+                    <span>이메일 <b>*</b></span>
+                    <input type="email" name="email" id="email" required>
+                  </label>
+                </div>
+                <div>
+                  <label for="kind">
+                    <span>견적의뢰 종류 선택 <b>*</b></span>
+                    <select name="kind" id="kind" required>
+                      <option value="" hidden>종류 선택</option>
+                      <option value="">소방점검/방화관리</option>
+                      <option value="">소방공사</option>
+                      <option value="">소방감리</option>
+                      <option value="">소방설계</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <div class="input-field row-field">
+                <div>
+                  <label for="floor">
+                    <span>층(지상/지하)</span>
+                    <input type="text" name="floor" id="floor">
+                  </label>
+                </div>
+                <div>
+                  <label for="location">
+                    <span>소재지</span>
+                    <input type="text" name="location" id="location">
+                  </label>
+                </div>
+              </div>
+              <div class="input-field row-field">
+                <div>
+                  <label for="usage">
+                    <span>용도</span>
+                    <input type="text" name="usage" id="usage">
+                  </label>
+                </div>
+                <div>
+                  <label for="area">
+                    <span>연면적</span>
+                    <input type="text" name="area" id="area">
+                  </label>
+                </div>
+              </div>
+              <div class="input-field">
+                <label for="message">
+                  <span>문의내용 <b>*</b></span>
+                  <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                </label>
+              </div>
+              <button name="submit" class="send-mail fire-estimate-submit">전송하기</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Go To Top -->
+    <div class="gototop">
+      <button class="btn-gototop">
+        <i class="bi bi-chevron-up"></i>
+      </button>
+    </div>
+    <!-- Footer -->
+    <div class="footer-include"></div>
+  </div>
+</body>
+</html>

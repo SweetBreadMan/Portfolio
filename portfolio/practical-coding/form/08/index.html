@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커스텀 로그인 폼</title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/custom.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/6fe22f7640.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="bg-img"></div>
+    <div class="container">
+        <form action="#none" class="login-inner">
+            <div class="user-photo">
+                <img src="images/user.png" alt="">
+            </div>
+            <h1>Welcome!</h1>
+            <div class="login-input">
+                    <div class="email input-inner">
+                        <span class="fa-solid fa-user"></span>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="password input-inner">
+                        <span class="fa-solid fa-lock"></span>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+            </div>
+            <div class="forgot">
+                <a href="#none">Forgot Password?</a>
+            </div>
+            <div class="login-button">
+                <button>LOGIN</button>
+            </div>
+            <div class="other-login">
+                <span>OR</span>
+                <div class="sns">
+                    <div class="facebook">
+                        <a href="#none">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                    <div class="instagram">
+                        <a href="#none">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="sign-up">
+                <span>Don't have account?</span>
+                <a href="#none">Signup Now</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

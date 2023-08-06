@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+a {
+    text-decoration: none;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 70px;
+    display: block;
+    position: relative;
+    z-index: -1;
+    -webkit-text-stroke: 1px #0984e3;
+    color: transparent;
+    z-index: 10;
+}
+a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #0984e3;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+    white-space: nowrap;
+}
+a:hover::before {
+    width: 100%;
+}
+a i {
+    font-size: 90px;
+    vertical-align: middle;
+}

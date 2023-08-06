@@ -1,0 +1,211 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0;
+    font-weight: 300;
+    background: url(images/background.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #222;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+.inner {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 1100px;
+    height: 700px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.inner > div {
+    float: left;
+    width: 50%;
+    height: 700px;
+}
+/* Photo CSS */
+.photo {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+.photo h1 {
+    font-family: 'Pushster', cursive;
+    font-size: 8em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: normal;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    -webkit-text-stroke: 1px #fff;
+    user-select: none;
+}
+.photo h1::after {
+    content: 'Welcome!';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #5164d3;
+    animation: wave 3s ease-in-out infinite;
+}
+@keyframes wave {
+    0%, 100% {
+        clip-path: polygon(0 48%, 19% 46%, 33% 53%, 47% 59%, 65% 64%, 85% 61%, 100% 56%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0 64%, 18% 69%, 34% 70%, 53% 65%, 69% 60%, 84% 53%, 100% 50%, 100% 100%, 0% 100%);
+    }
+}
+/* Login CSS */
+.login {
+    background-color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.login .logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.login .logo img {
+    width: 150px;
+}
+/* Form CSS */
+form {
+    padding: 0 80px;
+    text-align: center;
+}
+form h2 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+form h2 span {
+    color: #5164d3;
+    font-size: 35px;
+}
+/* Input email & password */
+.input-field {
+    position: relative;
+}
+.input-field input {
+    font-size: 16px;
+    margin-top: 30px;
+    width: 100%;
+    border: none;
+    border-image-source: linear-gradient(to top, #a3bded 0%, #6991c7 100%);;
+    border-bottom: 1px solid #000;
+    border-width: 3pt;
+    border-image-slice: 1;
+    outline: none;
+    padding: 10px 0;
+    background-color: transparent;
+}
+.input-field input + span {
+    position:absolute;
+    top: 35px;
+    left: 5px;
+    font-size: 20px;
+    transition: .3s;
+    font-weight: 400;
+    pointer-events: none;
+}
+.input-field input:focus + span,
+.input-field input:valid + span {
+    top: 15px;
+    font-size: 12px;
+    color: royalblue;
+}
+.input-field input + span.warning {
+    color: red;
+    animation: warning .3s ease-in-out 2;
+}
+@keyframes warning {
+    0%, 100% {
+    transform: translateX(-5px);
+    }
+    25% {
+    transform: translateX(5px);
+    }
+    50% {
+    transform: translateX(-5px);
+    }
+    75% {
+    transform: translateX(5px);
+    }
+}
+/* Save-info CSS */
+.save-info {
+    height: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.save-info label {
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+.save-info a:hover {
+    text-decoration: underline;
+}
+/* Custom Checkbox */
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox] + em {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #babdce;
+    border:1px solid #000;
+    border-radius: 50%;
+    transform: translateY(4px);
+    margin-right: 5px;
+}
+input[type=checkbox]:checked + em {
+    background-color: #5164d3;
+    color: #A4B7C6;
+}
+input[type=checkbox]:checked + em:after {
+    content: '\2714'; 
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    color: #fff; 
+    font-size: 10px;
+}
+input[type=checkbox]:checked + em + span {
+    color:rgb(100, 79, 177);
+}
+/* Login-btn */
+.login-field {
+    margin-top: 30px;
+}
+input[type=submit] {
+    color: #fff;
+    background: linear-gradient(-20deg, #2130ff 0%, #21d4fd 100%);
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    width: 300px;
+    font-size: 23px;
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+input[type=submit]:hover,
+input[type=submit]:active {
+    background: linear-gradient(-20deg, #1b28d8 0%, #21d4fd 100%);
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Mall Item</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/6fe22f7640.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">HOT ITEMS</div>
+        <div class="items">
+            <div class="item">
+                <div class="photo">
+                    <img src="images/item-01.jpg">
+                </div>
+                <div class="like">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="detail">
+                    <div class="title">
+                        <h3>스트레치 프리즘 맥코트<em>OLZEN</em></h3>
+                        <b class="price">56,910원</b>
+                    </div>
+                    <div class="size-color">
+                        <h3>사이즈</h3>
+                        <div class="size">
+                            <span>S</span>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>XL</span>
+                        </div>
+                        <h3>색상</h3>
+                        <div class="colors item01">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button>장바구니로</button>
+                        <button>구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <img src="images/item-02.jpg">
+                </div>
+                <div class="like">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="detail">
+                    <div class="title">
+                        <h3>베이직 캐쥬얼자켓<em>INDIAN</em></h3>
+                        <b class="price">83,540원</b>
+                    </div>
+                    <div class="size-color">
+                        <h3>사이즈</h3>
+                        <div class="size">
+                            <span>S</span>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>XL</span>
+                        </div>
+                        <h3>색상</h3>
+                        <div class="colors item02">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button>장바구니로</button>
+                        <button>구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <img src="images/item-04.jpg">
+                </div>
+                <div class="like">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="detail">
+                    <div class="title">
+                        <h3>프린트 크루넥 맨투맨<em>GIORDANO</em></h3>
+                        <b class="price">35,820원</b>
+                    </div>
+                    <div class="size-color">
+                        <h3>사이즈</h3>
+                        <div class="size">
+                            <span>S</span>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>XL</span>
+                        </div>
+                        <h3>색상</h3>
+                        <div class="colors item03">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button>장바구니로</button>
+                        <button>구매하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.size > span').click(function(){
+            $(this).addClass('active');
+            $(this).siblings('span').removeClass('active');
+        })
+        $('.colors > span').click(function(){
+            $(this).addClass('active');
+            $(this).siblings('span').removeClass('active');
+        })
+        $('.like').click(function(){
+            $(this).toggleClass('active');
+        })
+    </script>
+</body>
+</html>

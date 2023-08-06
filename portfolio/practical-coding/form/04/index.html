@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커스텀 로그인 폼</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-inner">
+            <form action="#none">
+                <h1>
+                    <span>L</span>og <span>I</span>n
+                </h1>
+                <input type="email" placeholder="User Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'User Email'" required >
+                <input type="password" placeholder="User Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'User Password'" required>
+                <a href="#none">forgot password?</a>
+                <div class="login-button">
+                    <button>
+                        Log In
+                    </button>
+                </div>
+                <div class="signup">
+                    Not a member? <a href="#none">Sign up now</a>
+                </div>
+            </form>
+        </div>
+        <div class="photo-inner">
+            <img src="images/photo.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

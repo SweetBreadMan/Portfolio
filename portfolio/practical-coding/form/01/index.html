@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커스텀 로그인 폼</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- XEION CDN -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<body>
+    <div class="container">
+        <form class="login">
+            <h1>Login Accounts</h1>
+            <span class="field">User Email</span>
+            <input type="email" placeholder="Type your email">
+            <span class="field">User Password</span>
+            <input type="password" placeholder="Type your password">
+            <div class="save-info">
+                <label for="save"><input id="save" type="checkbox"><em></em>Save your email</label>
+                <a href="#none">forgot password?</a>
+            </div>
+            <div class="event-info">
+                <span>Would you like to receive event emails?</span>
+                <div class="choose">
+                    <label for="yes"><input type="radio" name="answer" id="yes" checked><em></em>
+                        yes</label>
+                    <label for="no"><input type="radio" name="answer" id="no"><em></em>no</label>
+                </div>
+            </div>
+            <input type="button" value="LOGIN">
+            <div class="sns">
+                Or Login using
+                <div class="icons">
+                    <a href="#none"><i class="xi-naver"></i></a>
+                    <a href="#none"><i class="xi-facebook"></i></a>
+                    <a href="#none"><i class="xi-kakaotalk"></i></a>
+                    <a href="#none"><i class="xi-google"></i></a>
+                </div>
+            </div>
+            <div class="signup-info">
+                Have not account yet?
+                <a href="#none">SIGN UP</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

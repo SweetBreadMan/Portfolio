@@ -1,0 +1,246 @@
+/* Google Web Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  display: flex;
+}
+
+/* Photo */
+.photo {
+  flex: 1;
+  width: 550px;
+  height: 100vh;
+  background-color: #F1CDD7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.photo-slogan {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.photo-slogan .photo-slogan-inner {
+  padding-top: 60px;
+  width: 350px;
+}
+.photo-slogan .photo-slogan-inner h2 {
+  user-select: none;
+  color: #865C6C;
+  font-size: 36px;
+  line-height: 1.1em;
+}
+.photo-inner {
+  width: 100%;
+  height: 100%;
+}
+.photo-inner img {
+  object-fit: contain;
+  width: inherit;
+  height: inherit;
+  transform: scale(1.1);
+}
+
+/* Content */
+.content {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+.content .content-inner {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+.content .content-inner h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.content .content-inner .connections {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.content .content-inner .connections .google .google-inner {
+  width: 250px;
+  height: 40px;
+  border: 2px solid #1A73E8;
+  display: inline-block;
+  background-color: #1A73E8;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: 0.35s;
+}
+.content .content-inner .connections .google .google-inner:hover {
+  background-color: #6c9cdb;
+  border: 2px solid #6c9cdb;
+}
+.content .content-inner .connections .google .google-inner .google-icon {
+  background-color: #fff;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-inner .connections .google .google-inner .google-icon img {
+  width: 23px;
+  height: 23px;
+}
+.content .content-inner .connections .google .google-inner span {
+  padding-left: 10px;
+  text-align: center;
+  color: #fff;
+}
+.content .content-inner .connections .twitter .twitter-inner {
+  width: 50px;
+  height: 44px;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.35s;
+}
+.content .content-inner .connections .twitter .twitter-inner:hover {
+  background-color: #e5e5e5;
+}
+.content .content-inner .connections .twitter .twitter-inner i {
+  color: gray;
+}
+.content .content-inner .divide {
+  text-align: center;
+  position: relative;
+  margin: 20px 0;
+}
+.content .content-inner .divide:before, .content .content-inner .divide:after {
+  content: "";
+  width: 45%;
+  height: 1px;
+  background-color: #e5e5e5;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.content .content-inner .divide:after {
+  left: 55%;
+}
+.content .content-inner .signin-inner form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.content .content-inner .signin-inner form .form-field {
+  display: flex;
+  flex-direction: column;
+}
+.content .content-inner .signin-inner form .form-field label {
+  font-weight: bold;
+}
+.content .content-inner .signin-inner form .form-field label a {
+  float: right;
+  font-weight: normal;
+  color: #7263D4;
+}
+.content .content-inner .signin-inner form .form-field input {
+  margin-top: 10px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #f4f4f4;
+  background-color: #f4f4f4;
+  height: 40px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.content .content-inner .signin-inner form .form-field input:hover, .content .content-inner .signin-inner form .form-field input:focus {
+  box-shadow: 0 0 5px 2px rgba(253, 167, 223, 0.5568627451);
+  background-color: #fff;
+}
+.content .content-inner .signin-inner form button {
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color: #e6548b;
+  width: 200px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.content .content-inner .signin-inner form button:hover {
+  background-color: #f097b8;
+}
+.content .content-inner .signin-inner form button:active {
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+.content .content-inner .signin-inner form .signup-link-mobile {
+  display: none;
+}
+.content .signup-link {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+.content .signup-link a {
+  color: #7263D4;
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+  .photo {
+    display: none;
+  }
+  .content .content-inner {
+    padding: 50px 20px;
+    width: 100%;
+  }
+  .content .content-inner h2 {
+    font-size: 27px;
+  }
+  .content .content-inner .connections {
+    gap: 20px;
+  }
+  .content .content-inner .signin-inner form button {
+    width: 100%;
+  }
+  .content .content-inner .signin-inner form .signup-link-mobile {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+  }
+  .content .content-inner .signin-inner form .signup-link-mobile a {
+    color: #7263D4;
+  }
+  .content .signup-link {
+    display: none;
+  }
+}

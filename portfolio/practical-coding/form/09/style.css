@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Gothic A1', sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+}
+
+a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+
+@media (max-width:768px) {
+    .container {
+        position: static;
+        transform: translate(0, 0);
+    }
+}
+
+/* signup part */
+.signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #bbb;
+    width: 400px;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.signup-input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.signup-input label {
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.signup-input label:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: dodgerblue;
+    opacity: 0;
+    transition: .2s;
+}
+
+.signup-input label.focus:after {
+    opacity: 1;
+}
+
+.input-icon {
+    width: 10%;
+    height: 100%;
+    float: left;
+    background-color: #FAFAFA;
+    position: relative;
+    border: 1px solid #bbb;
+}
+
+.input-icon:before {
+    font-family: fontawesome;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #bbb;
+}
+
+.input-user-icon:before {
+    content: '\f007';
+}
+
+.input-email-icon:before {
+    content: '\f0e0';
+}
+
+.input-password-icon:before {
+    content: '\f023';
+}
+
+.signup-input label input {
+    width: 90%;
+    height: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    outline: none;
+    border: 1px solid #bbb;
+    border-left: none;
+}
+
+/* check box part */
+.checkbox {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.checkbox>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox>div a {
+    margin-left: auto;
+}
+
+input[type='checkbox'] {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+.checkbox label span {
+    cursor: pointer;
+}
+
+/* signup button */
+.signup-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.signup-button button {
+    background-color: dodgerblue;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+    border: none;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.signup-button button:hover {
+    background-color: rgb(28, 135, 241);
+}
+
+.signup-button button:active {
+    background-color: rgb(25, 121, 216);
+}
+
+/* other signup */
+.other-signup {
+    border-top: 1px solid #eee;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 0 0 0;
+}
+
+.other-signup span {
+    font-size: 13px;
+}
+
+.other-signup-inner {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.other-signup-inner>div {
+    width: 48%;
+    height: 40px;
+    margin-bottom: 10px;
+    transition: .3s;
+}
+
+.other-signup-inner>div:hover {
+    /* filter: grayscale(20%); */
+    opacity: 0.85;
+}
+
+.other-signup-inner>div a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Hahmlet', serif;
+}
+
+.other-signup-inner>div a span {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.icon {
+    margin-right: 20px;
+    width: 40px;
+    height: 100%;
+    border-right: 1px solid #8395a7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facebook a {
+    background-color: #415C96;
+    color: #fff;
+}
+
+.facebook .icon img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+}
+
+.google a {
+    background-color: #ECECEC;
+}
+
+.google .icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.twitter a {
+    background-color: #1DA1F2;
+    color: #fff;
+}
+
+.twitter .icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.naver a {
+    background-color: #06BD34;
+    color: #fff;
+}
+
+.naver .icon img {
+    width: 30px;
+    height: 30px;
+}

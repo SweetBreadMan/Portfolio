@@ -1,0 +1,271 @@
+/* Google Web Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    line-height: 1.5em;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+// Variables
+$slogan-font: 'Roboto', sans-serif;
+$form-font: 'Montserrat', sans-serif;
+$photo-bgc: #F1CDD7;
+$link-color: #7263D4;
+$button-color: #e6548b;
+
+// Mixin
+@mixin input-design {
+    margin-top: 10px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #f4f4f4;
+    background-color: #f4f4f4;
+    height: 40px;
+    border-radius: 10px;
+    transition: .3s;
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 5px 2px #fda7df8e;
+        background-color: #fff;
+    }
+}
+
+.container {
+    display: flex;
+}
+/* Photo */
+.photo {
+    flex: 1;
+    width: 550px;
+    height: 100vh;
+    background-color: $photo-bgc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &-slogan {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $slogan-font;
+        font-weight: 400;
+        .photo-slogan-inner {
+            padding-top: 60px;
+            width: 350px;
+            h2 {
+                user-select: none;
+                color: #865C6C;
+                font-size: 36px;
+                line-height: 1.1em;
+            }
+        }
+    }
+    &-inner {
+        width: 100%;
+        height: 100%;
+        img {
+            object-fit: contain;
+            width: inherit;
+            height: inherit;
+            transform: scale(1.1);
+        }
+    }
+}
+/* Content */
+.content {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $form-font;
+    position: relative;
+    .content-inner {
+        display: flex;
+        width: 400px;
+        flex-direction: column;
+        h2 {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        .connections {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            .google {
+                .google-inner {
+                    width: 250px;
+                    height: 40px;
+                    border: 2px solid #1A73E8;
+                    display: inline-block;
+                    background-color: #1A73E8;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    transition: .35s;
+                    &:hover {
+                        background-color: #6c9cdb;
+                        border: 2px solid #6c9cdb;
+                    }
+                    .google-icon {
+                        background-color: #fff;
+                        display: inline-block;
+                        width: 38px;
+                        height: 38px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width: 23px;
+                            height: 23px;
+                        }
+                    }
+                    span {
+                        padding-left: 10px;
+                        text-align: center;
+                        color: #fff;
+                    }
+                }
+            }
+            .twitter {
+                .twitter-inner {
+                    width: 50px;
+                    height: 44px;
+                    border-radius: 10px;
+                    display: inline-block;
+                    background-color: #f4f4f4;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: .35s;
+                    &:hover {
+                        background-color: #e5e5e5;
+                    }
+                    i {
+                        color: gray;
+                    }
+                }
+            }
+        }
+        .divide {
+            text-align: center;
+            position: relative;
+            margin: 20px 0;
+            &:before,
+            &:after {
+                content: '';
+                width: 45%;
+                height: 1px;
+                background-color: #e5e5e5;
+                position: absolute;
+                left: 0;
+                top: 50%;
+            }
+            &:after {
+                left: 55%;
+            }
+        }
+        .signin-inner {
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                .form-field {
+                    display: flex;
+                    flex-direction: column;
+                    label {
+                        font-weight: bold;
+                        a {
+                            float: right;
+                            font-weight: normal;
+                            color: $link-color;
+                        }
+                    }
+                    input {
+                        @include input-design;
+                    }
+                }
+                button {
+                    color: #fff;
+                    outline: none;
+                    border: none;
+                    background-color: $button-color;
+                    width: 200px;
+                    height: 45px;
+                    border-radius: 10px;
+                    font-size: 18px;
+                    font-family: $form-font;
+                    cursor: pointer;
+                    transition: .1s;
+                    &:hover {
+                        background-color: lighten($button-color, 15%);
+                    }
+                    &:active {
+                        box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.3);
+                    }
+                }
+                .signup-link-mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+    .signup-link {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        a {
+            color: $link-color;
+        }
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    .photo {
+        display: none;
+    }
+    .content {
+        .content-inner {
+            padding: 50px 20px;
+            width: 100%;
+            h2 {
+                font-size: 27px;
+            }
+            .connections {
+                gap: 20px;
+            }
+            .signin-inner {
+                form {
+                    button {
+                        width: 100%;
+                    }
+                    .signup-link-mobile {
+                        display: block;
+                        text-align: center;
+                        font-size: 16px;
+                        a {
+                            color: $link-color;
+                        }
+                    }
+                }
+            }
+        }
+        .signup-link {
+            display: none;
+        }
+    }
+}

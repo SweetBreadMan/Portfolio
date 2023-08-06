@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>검색창 확장</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="gnb">
+                <a href="#none">HOME</a>
+                <a href="#none">PRODUCTS</a>
+                <a href="#none">STORE</a>
+                <a href="#none">WISHLIST</a>
+            </div>
+            <div class="search">
+                <span class="clear">
+                    <i class="xi-close-thin"></i>
+                </span>
+                <div class="icon">
+                    <i class="xi-search"></i>
+                </div>
+                <div class="input-frame">
+                    <input id="searchInput" type="text" placeholder="Type Here...">
+                </div>
+            </div>
+        </header>
+        <section>
+            <h1>Diamond</h1>
+            <p>
+                Diamond is a solid form of the element carbon with its atoms arranged in a crystal structure called diamond cubic. 
+            </p>
+        </section>
+        <section>
+            <h1>Sapphire</h1>
+            <p>
+                Sapphire is a precious gemstone, a variety of the mineral corundum
+            </p>
+        </section>
+    </div>
+
+    <script>
+        let icon = document.querySelector('.icon');
+        let clear = document.querySelector('.clear');
+        let searchBar = document.querySelector('.search');
+        let searchInput = document.getElementById('searchInput');
+        let section = document.getElementsByTagName('section');
+
+        icon.onclick = function(){
+            searchBar.classList.toggle('active');
+        }
+        clear.onclick = function(){
+            searchInput.value = '';
+        }
+        for (let i = 0; section.length; i++) {
+            section[i].onclick = function(){
+                searchBar.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #00cec9;
+    transition: .3s;
+}
+.login-wrapper {
+    position: relative;
+    padding: 50px 50px;
+    background-color: #fff;
+    width: 400px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+.login-wrapper h2 {
+    font-weight: 600;
+    border-left: 15px solid;
+    border-color: #00cec9;
+    padding-left: 10px;
+    transition: .3s;
+}
+.input-box {
+    margin-bottom: 20px;
+}
+input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+.input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    border: 2px solid #ddd;
+    font-size: 15px;
+    color: #333;
+}
+#login-button {
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    background-color: #00cec9;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .3s;
+}
+.links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.links a {
+    text-decoration: none;
+    color: #000;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+.colors {
+    position: absolute;
+    right: 30%;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.colors span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color);
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.colors span.active {
+    border: 2px solid #666;
+    transform: scale(1.3);
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .login-wrapper {
+        order: 2;
+    }
+    .colors {
+        position: static;
+        order: 1;
+        flex-direction: row;
+        width: 100%;
+    }
+    .colors span {
+        margin: 10px 20px;
+    }
+}

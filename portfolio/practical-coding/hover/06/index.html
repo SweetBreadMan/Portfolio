@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover and change image</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <ul class="nav">
+            <li>
+                <a href="#none" data-text="tokyo" data-image="images/tokyo.jpg">tokyo</a>
+            </li>
+            <li>
+                <a href="#none" data-text="london" data-image="images/london.jpg">london</a>
+            </li>
+            <li>
+                <a href="#none" data-text="newyork" data-image="images/newyork.jpg">newyork</a>
+            </li>
+            <li>
+                <a href="#none" data-text="dubai" data-image="images/dubai.jpg">dubai</a>
+            </li>
+            <li>
+                <a href="#none" data-text="taipei" data-image="images/taipei.jpg">taipei</a>
+            </li>
+        </ul>
+        <div class="background"></div>
+    </div>
+
+    <script>
+        $('.nav li a').mouseenter(function(){
+            var background = $('.background')
+            var changeImg = $(this).attr('data-image');
+            $('.background').css({
+                'background-image':'url('+ changeImg + ')'
+            });
+        })
+        $('.nav li a').mouseleave(function(){
+            $('.background').css({
+                'background-image': ''
+            });
+        })
+    </script>
+</body>
+</html>

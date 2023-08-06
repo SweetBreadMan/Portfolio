@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커스텀 로그인 폼</title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/custom.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6fe22f7640.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <form class="signup" action="#none">
+        <div class="logo">
+            <img src="images/logo.png" alt="로고 이미지">
+        </div>
+        <h3>회원이 되어서 다양한 서비스를 이용해 보세요</h3>
+        <div class="signup-input">
+            <label for="id-input">
+            <span class="input-icon input-user-icon"></span>
+            <input type="id" id="id-input" placeholder="아이디">
+            </label>
+            <label for="email-input">
+            <span class="input-icon input-email-icon"></span>
+            <input type="email" id="email-input" placeholder="이메일">
+            </label>
+            <label for="password-input">
+            <span class="input-icon input-password-icon"></span>
+            <input type="password" id="password-input" placeholder="비밀번호">
+            </label>
+            <label for="password-input">
+            <span class="input-icon input-password-icon"></span>
+            <input type="password" id="password-input" placeholder="비밀번호 확인">
+            </label>
+        </div>
+        <div class="checkbox">
+            <div>
+            <label for="cb1">
+                <input type="checkbox" id="cb1">
+                <span>서비스에 대한 소식을 이메일로 받아봅니다.</span>
+            </label>
+            </div>
+            <div>
+            <label for="cb2">
+                <input type="checkbox" id="cb2">
+                <span>서비스 약관에 동의합니다.</span>
+            </label>
+            <a href="#none">약관 보기 ></a>
+            </div>
+        </div>
+        <div class="signup-button">
+            <button>
+            가입하기
+            </button>
+        </div>
+        <div class="other-signup">
+            <span>다른 계정으로 가입</span>
+            <div class="other-signup-inner">
+            <div class="facebook">
+                <a href="#none">
+                <div class="icon">
+                    <img src="images/facebook-icon.png" alt="페이스북 아이콘">
+                </div>
+                <span>페이스북</span>
+                </a>
+            </div>
+            <div class="google">
+                <a href="#none">
+                <div class="icon">
+                    <img src="images/google-icon.png" alt="구글 아이콘">
+                </div>
+                <span>구글</span>
+                </a>
+            </div>
+            <div class="twitter">
+                <a href="#none">
+                <div class="icon">
+                    <img src="images/twitter-icon.png" alt="트위터 아이콘">
+                </div>
+                <span>트위터</span>
+                </a>
+            </div>
+            <div class="naver">
+                <a href="#none">
+                <div class="icon">
+                    <img src="images/naver-icon.png" alt="네이버 아이콘">
+                </div>
+                <span>네이버</span>
+                </a>
+            </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

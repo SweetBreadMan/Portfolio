@@ -1,0 +1,115 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    background-color: #eee;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+/* header part */
+header {
+    width: 100%;
+    height: 60px;
+    padding-top: 12px;
+    background-color: #fff;
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* section part */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px );
+}
+.login {
+    width: 400px;
+}
+/* login-type part */
+.login-type {
+    text-align: center;
+}
+.login-type h1 {
+    font-size: 50px;
+    margin-top: 0;
+    font-weight: normal;
+}
+.login-type .or-txt {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+}
+.or-txt:before,
+.or-txt:after {
+    content: '';
+    position: absolute;
+    background-color: lightgray;
+    height: 1px;
+    width: 44%;
+    top: 50%;
+}
+.or-txt:before {
+    left: 0;
+}
+.or-txt:after {
+    right: 0;
+}
+.btn {
+    display: block;
+    text-align: center;
+    font-size: 23px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: white;
+    opacity: 0.7;
+}
+.btn:nth-of-type(1) {
+    color: #333;
+    background: #fff url(images/logo-mobile.png) no-repeat center left 10px;
+}
+.btn:nth-of-type(2) {
+    background: #898c9b url(images/logo-email.png) no-repeat center left 13px;
+}
+.btn:nth-of-type(3) {
+    background: #11ce00 url(images/logo-naver.png) no-repeat center left 13px;
+}
+.btn:nth-of-type(4) {
+    background: #0076fe url(images/logo-facebook.png) no-repeat center left 13px;
+}
+.btn:nth-of-type(5) {
+    background: #00C026 url(images/logo-line.png) no-repeat center left 13px;
+}
+.btn:hover {
+    opacity: 1;
+}
+/* login-footer part */
+.login-footer p {
+    text-align: center;
+}
+.login-footer p a {
+    font-weight: bold;
+    margin-left: 5px;
+}
+.login-footer p a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .login-type {
+        padding: 0 10px;
+    }
+    .login-footer {
+        padding: 0 10px;
+    }
+}

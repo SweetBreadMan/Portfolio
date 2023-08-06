@@ -1,0 +1,392 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+/* Variable */
+:root {
+    --primary-color: #03C75A;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #777;
+}
+a {
+    text-decoration: none;
+    color: #777;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+input, button {
+    outline: none;
+    cursor: pointer;
+}
+/* Default */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: 300;
+}
+.logo {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 50px;
+}
+.logo img {
+    width: 100%;
+}
+.login-inner {
+    width: 450px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 0 0 5px 5px;
+}
+input:not(input[type=checkbox]) {
+    width: 100%;
+    padding: 15px 35px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+input:not(input[type=checkbox]):focus {
+    border: 1px solid var(--primary-color);
+    z-index: 1;
+}
+.login-btn {
+    width: 100%;
+    margin-top: 30px;
+}
+.login-btn button {
+    width: 100%;
+    padding: 13px 0;
+    font-size: 20px;
+    color: #fff;
+    border: solid 1px rgba(0,0,0,.15);
+    background-color: var(--primary-color);
+    font-weight: bold;
+    border-radius: 5px;
+}
+/* ###### Tabs ###### */
+.login-tabs {
+    display: flex;
+}
+.login-tab {
+    flex: 1;
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color: #F8F9FA;
+    border: 1px solid #ddd;
+    margin-bottom: -1px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    user-select: none;
+}
+.login-tab i {
+    font-size: 13px;
+    margin-right: 5px;
+}
+.login-tab:nth-child(2) i {
+    position: relative;
+    top: -7%;
+}
+.login-tab.active {
+    border: 1px solid #bbb;
+    background-color: #fff;
+    color: #000;
+    border-bottom: 1px solid transparent;
+}
+.login-tab.active i {
+    color: var(--primary-color);
+}
+
+/* ####### Id Login Form ####### */
+.input-box {
+    position: relative;
+    width: 100%;
+}
+.input-box span {
+    position :absolute;
+    top: 50%;
+    left: 13px;
+    margin-top: -2px;
+    transform: translateY(-50%);
+    color: #ccc;
+    z-index: 10;
+}
+.input-box input:focus + span {
+    color: #555;
+}
+.id-box input {
+    margin-bottom: -1px;
+    border-radius: 5px 5px 0 0;
+}
+.pw-box input {
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15);
+}
+.input-box input:focus {
+    border: 1px solid var(--primary-color);
+    z-index: 1;
+}
+/* Checks */
+.checks {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.keep-check {
+    position: relative;
+}
+.keep-check input[type=checkbox] {
+    display: none;
+}
+.keep-check input[type=checkbox] + label {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+.keep-check input[type=checkbox] + label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: url(images/check-icon.png ) no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    background-position: left center;
+}
+.keep-check input[type=checkbox]:checked + label::before {
+    background-position: right center;
+}
+.ip-check {
+    display: flex;
+    align-items: center;
+}
+.switch {
+    width: 35px;
+    height: 18px;
+    background-color: #ddd;
+    border-radius: 12px;
+    margin-left: 5px;
+    position: relative;
+    transition: .2s;
+    cursor: pointer;
+}
+.switch::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 6%;
+    transform: translateY(-50%);
+    transition: .2s;
+}
+.switch.toggle {
+    background-color: var(--primary-color);
+}
+.switch.toggle::after {
+    left: 52%;
+}
+
+/* ####### Ones Number Form ####### */
+.ones-number-form {
+    display: none;
+}
+.ones-text {
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+}
+.ones-text span {
+    color: var(--primary-color);
+}
+.ones-input {
+    width: 100%;
+    margin-top: 50px;
+}
+.ones-input input {
+    border-radius: 5px;
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+.ones-input input::placeholder {
+    text-align: center;
+}
+.ones-number-form .login-btn {
+    margin-top: 10px;
+}
+
+/* ####### QR Form ####### */
+.qr-form {
+    display: none;
+    padding: 30px 80px;
+}
+.qr-map {
+    display: flex;
+    justify-content: center;
+}
+.qr-img {
+    width: 100px;
+    height: 100px;
+}
+.qr-map img {
+    width: 100%;
+    height: 100%;
+}
+.time {
+    align-self: end;
+    position: relative;
+    bottom: 8px;
+}
+.time h3,
+.time h4 {
+    margin: 0;
+}
+.time h3 {
+    font-size: 13px;
+    font-weight: 300;
+    color: #000;
+}
+.time h4 {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.qr-form p {
+    display: inline-block;
+    text-align: center;
+    color: #000;
+}
+.qr-form span {
+    font-size: 13px;
+    text-align: center;
+}
+.qr-form span em {
+    background-color: #000;
+    border-radius: 20px;
+    padding: 0 8px;
+    color: #fff;
+}
+
+/* Find */
+.find {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.find li {
+    margin: 0 15px;
+    position: relative;
+}
+.find li:not(:nth-child(1))::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 15px;
+    background-color: #ddd;
+}
+
+/* ###### Footer ###### */
+.footer-inner {
+    padding-top: 60px;
+    font-size: 13px;
+}
+.footer-link {
+    display: flex;
+    justify-content: center;
+}
+.footer-link li {
+    margin: 0 10px;
+    position: relative;
+}
+.footer-link li:not(:nth-child(1))::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-40%);
+    width: 1px;
+    height: 13px;
+    background-color: #ddd;
+}
+.footer-copy {
+    text-align: center;
+    padding-top: 10px;
+}
+.footer-copy a img {
+    width: 70px;
+}
+.footer-copy span {
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+    .login-inner {
+        width: 100%;
+    }
+    form {
+        padding: 30px;
+    }
+
+    /* ###### Tabs ###### */
+    .login-tab span {
+        display: none;
+    }
+
+    /* ###### Ones Number Form */
+    .ones-text {
+        word-break: keep-all;
+    }
+    .ones-input {
+        margin-top: 20px;
+    }
+
+    /* ####### QR Form ####### */
+    .qr-form {
+        padding: 30px;
+        word-break: keep-all;
+    }
+
+    /* ###### Footer ###### */
+    .footer-link {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-link li {
+        margin: 0 8px;
+        position: relative;
+    }
+    .footer-link li:not(:nth-child(1))::before {
+        left: -8px;
+    }
+}

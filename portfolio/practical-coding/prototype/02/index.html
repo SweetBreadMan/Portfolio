@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- XEION CDN -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- style & responsive CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>풀스크린 반응형 네비게이션</title>
+</head>
+<body>
+    <div class="toggle">
+        <i class="xi-plus"></i>
+    </div>
+    <div class="overlay"></div>
+    <ul class="gnb">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#graphic">Graphic Portfolio</a></li>
+        <li><a href="#web">Web Portfolio</a></li>
+    </ul>
+    <div class="container">
+        <section class="welcome">
+            <img src="images/background.jpg">
+            <h1>Design Your Dream</h1>
+            <a href="#home">
+                <i class="xi-angle-down"></i>
+            </a>
+        </section>
+        <section id="home">
+            <div class="inner">
+                <div class="heading">
+                    <h1>BRAND STRATEGY & WEBSITE DESIGN </h1>
+                </div>
+                <div class="home-items">
+                    <div class="home-item">
+                        <div class="home-image">
+                            <img src="images/about-01.png">
+                        </div>
+                        <b>Design</b>
+                        <p>
+                            Crafting custom high-end Website design driven from smart brand-centric and results driven strategies is our specialty.
+                        </p>
+                    </div>
+                    <div class="home-item">
+                        <div class="home-image">
+                            <img src="images/about-02.png">
+                        </div>
+                        <b>Coding</b>
+                        <p>
+                            Coding is an amazing technology that revolutionizes the world we live in. It's like pressing a magical button that has the power to create innovative changes.
+                        </p>
+                    </div>
+                    <div class="home-item">
+                        <div class="home-image">
+                            <img src="images/about-03.png">
+                        </div>
+                        <b>Launch</b>
+                        <p>
+                            From corporate website development, e-commerce, custom web applications and product configurators, our code is intelligent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="inner">
+                <div class="heading">
+                    <h1>ABOUT</h1>
+                    <p>
+                        As a premier New York-based <b>website design</b> and development company, create and continues to nurture a multi-channel <b>digital marketing</b> agency with super creative proficiency in all things marketing-related. From industry-leading digital design and development to maximized social media strategies to effective PR campaigns, our goal is to actualize the client’s needs and desires delivering bottom-line results and superior ROI.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="graphic">
+            <div class="inner">
+                <div class="heading">
+                    <h1>Graphic Portfolio</h1>
+                </div>
+                <div class="portfolio-items graphic-items">
+                    <div class="portfolio-item graphic-item">
+                        <div class="portfolio-image graphic-image">
+                            <img src="images/graphic-01.jpg">
+                        </div>
+                        <b>Pink Pastel Background</b>
+                    </div>
+                    <div class="portfolio-item graphic-item">
+                        <div class="portfolio-image graphic-image">
+                            <img src="images/graphic-02.jpg">
+                        </div>
+                        <b>Bird Abstract Graphic</b>
+                    </div>
+                    <div class="portfolio-item graphic-item">
+                        <div class="portfolio-image graphic-image">
+                            <img src="images/graphic-03.jpg">
+                        </div>
+                        <b>Colorful Splash 3d Graphic</b>
+                    </div>
+                    <div class="portfolio-item graphic-item">
+                        <div class="portfolio-image graphic-image">
+                            <img src="images/graphic-04.jpg">
+                        </div>
+                        <b>3d Abstract Wave Pattern Background</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="web">
+            <div class="inner">
+                <div class="heading">
+                    <h1>Web Portfolio</h1>
+                </div>
+                <div class="portfolio-items web-items">
+                    <div class="portfolio-item web-item">
+                        <div class="portfolio-image web-image">
+                            <img src="images/web-01.jpg">
+                        </div>
+                        <b>Restaurant Renewal</b>
+                    </div>
+                    <div class="portfolio-item web-item">
+                        <div class="portfolio-image web-image">
+                            <img src="images/web-02.jpg">
+                        </div>
+                        <b>Hiking Introducing</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        $('.toggle').click(function(){
+            $('.toggle, .overlay, .gnb').toggleClass('active');
+        })
+        $('.overlay').click(function(){
+            $('.toggle, .overlay, .gnb').removeClass('active');
+        })
+        $('.gnb a').click(function(){
+            $('.toggle, .overlay, .gnb').removeClass('active');
+        })
+    </script>
+</body>
+</html>

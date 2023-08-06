@@ -1,0 +1,122 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Card */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .heading {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 800;
+  font-size: 40px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.card-inner {
+  display: flex;
+  gap: 40px;
+}
+.card-inner .card {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  overflow: hidden;
+  flex: 1;
+  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.2);
+}
+.card-inner .card .card-caption {
+  width: 50%;
+  padding: 20px;
+}
+.card-inner .card .card-caption h2 {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: right;
+}
+.card-inner .card .card-caption h2 span {
+  font-weight: bold;
+}
+.card-inner .card .card-caption p {
+  display: inline-block;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  line-height: 1.3em;
+  font-size: 16px;
+  text-align: right;
+  color: #999;
+}
+.card-inner .card .card-caption .icons {
+  text-align: right;
+}
+.card-inner .card .card-caption .icons a:hover i {
+  color: #333;
+}
+.card-inner .card .card-caption .icons i {
+  margin: 10px;
+  color: #999;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.card-inner .card .photo {
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  left: -15%;
+  overflow: hidden;
+  border: 7px solid #fff;
+  transform: scale(1.3);
+  transition: 0.3s;
+}
+.card-inner .card .photo img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+.card-inner .card:hover .photo {
+  left: -10%;
+}
+.card-inner .card .card-bottom {
+  width: 100%;
+  text-align: right;
+  padding: 20px 30px;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.card.photographer .card-bottom {
+  background-color: #99795C;
+}
+
+.card.chef img {
+  object-position: right;
+}
+.card.chef .card-bottom {
+  background-color: #da4949;
+}

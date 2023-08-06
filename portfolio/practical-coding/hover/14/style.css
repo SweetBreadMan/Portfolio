@@ -1,0 +1,64 @@
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+body {
+    margin: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a {
+    font-size: 40px;
+    color: white;
+    margin: 40px;
+    position: relative;
+    text-decoration: none;
+}
+a:before {
+    content: attr(data-text);
+    position: absolute;
+    background-color: #777;
+    width: 100px;
+    height: 30px;
+    font-size: 19px;
+    color: #000;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+}
+a:after {
+    content: '';
+    position: absolute;
+    background-color: #777;
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    display: none
+}
+/* Hover */
+a:hover:before,
+a:hover:after {
+    display: block;
+}
+a:before,
+a:after {
+    display: none;
+}
+a:nth-child(1):hover {
+    color: #1877F2;
+}
+a:nth-child(2):hover {
+    color: #1DA1F2;
+}
+a:nth-child(3):hover {
+    color: #E4405F;
+}
+a:nth-child(4):hover {
+    color: #CD201F;
+}

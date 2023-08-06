@@ -1,0 +1,120 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(images/background.jpg) center center;
+    background-size: cover;
+    position: relative;
+}
+body:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.container {
+    width: 1600px;
+}
+h1 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    color: #fff;
+    letter-spacing: 3px;
+}
+h1:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    background-color: crimson;
+}
+.items {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.item {
+    width: 370px;
+    height: 400px;
+    border-radius: 20px;
+    position: relative;
+    color: #fff;
+    transition: .3s;
+    overflow: hidden;
+    box-shadow: 0px 15px 35px rgba(255, 255, 255, 0.2);
+}
+.item:hover {
+    width: 500px;
+}
+.item:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
+}
+.item:nth-child(1) {
+    background: url(images/image-01.png) no-repeat center center;
+    background-size: cover;
+}
+.item:nth-child(2) {
+    background: url(images/image-02.jpg) no-repeat center center;
+    background-size: cover;
+}
+.item:nth-child(3) {
+    background: url(images/image-03.jpg) no-repeat center center;
+    background-size: cover;
+}
+.item:nth-child(4) {
+    background: url(images/image-04.jpg) no-repeat center center;
+    background-size: cover;
+}
+.item img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.item div {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: 10;
+    padding: 20px 30px;
+    transition: .3s;
+    width: 100%;
+}
+.item:hover div {
+    bottom: 20%;
+}
+.item div h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.item div p {
+    position: absolute;
+    width: 90%;
+    font-weight: 500;
+    font-size: 18px;
+    opacity: 0;
+    transition: .5s;
+}
+.item:hover div p {
+    opacity: 1;
+}

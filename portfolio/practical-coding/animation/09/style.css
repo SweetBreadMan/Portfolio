@@ -1,0 +1,49 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+body {
+    margin: 0;
+    background-color: #40407a;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-bottom: 5px solid #fff;
+    box-shadow: 1px 15px 10px -10px rgba(0, 0, 0, 0.5);
+    animation: reveal 2s linear forwards;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    user-select: none;
+}
+@keyframes reveal {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    30% {
+        width: 200px;
+        height: 0px;
+    }
+    60% {
+        width: 500px;
+        height: 0px;
+    }
+    80% {
+        width: 500px;
+        height: 80px;
+    }
+    100% {
+        width: 500px;
+        height: 80px;
+    }
+}

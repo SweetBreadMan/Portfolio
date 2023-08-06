@@ -1,0 +1,349 @@
+/* Responsive for Mobile */
+@media (max-width: 767px) {
+  /* Default CSS */
+  h1,h2,h3,h4,h5,h6 {
+    word-break: keep-all;
+  }
+  /* ############ Common CSS ############ */
+  .content [class*=inner]:not(.main-slider-inner, .title-inner, .slogan-inner) {
+    width: 100%;
+    padding: 80px 20px;
+  }
+  .content {
+    margin-top: 70px;
+    margin-bottom: 0;
+  }
+  section.title .title-inner,
+  section.slogan .slogan-inner {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  section.title .title-inner h2 {
+    font-size: 22px;
+  }
+  section.slogan .slogan-inner h3 {
+    font-size: 20px;
+  }
+  .items-headline h3 {
+    font-size: 22px;
+  }
+  /* ############ Header CSS ############ */
+  .header-inner {
+    width: 100%;
+    height: 70px;
+    padding: 0 10px;
+    position: relative;
+  }
+  .trigger {
+    display: block;
+  }
+  .btn-trigger {
+    font-size: 24px;
+    background-color: transparent;
+    color: #333;
+  }
+  .btn-trigger.active {
+    color: var(--primary-color);
+  }
+  .header-logo {
+    display: flex;
+    margin: auto;
+  }
+  .header-logo a {
+    margin-right: 30px;
+  }
+  .header-logo a:nth-child(2) {
+    margin-right: 0;
+  }
+  .header-logo a:nth-child(3) {
+    display: none;
+  }
+  .header-logo a img {
+    height: 35px;
+  }
+  /* GNB */
+  .gnb-outer {
+    display: none;
+  }
+  .gnb-outer-mobile {
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    padding: 0 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .gnb {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .gnb li {
+    height: auto;
+    font-size: 14px;
+    position: relative;
+  }
+  .gnb li:last-child {
+    margin-bottom: 10px;
+  }
+  .gnb li > a {
+    padding: 10px 0;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  .gnb li:last-child > a {
+    border-bottom: none;
+  }
+  .gnb li:hover > a {
+    color: #333;
+  }
+  .gnb li > a:after {
+    display: none;
+  }
+  .gnb li > a .btn-mobile-dropdown {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  /* Dropdown */
+  .dropdown {
+    position: static;
+    top: 100%;
+    width: 100%;
+    border: none;
+    display: none;
+    padding-left: 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: none;
+  }
+  .dropdown a {
+    padding: 10px 0;
+  }
+  .dropdown a:hover {
+    color: #333;
+  }
+
+  /* ######## Go TO Top ########*/
+  .gototop {
+    right: 20px;
+    bottom: 30px;
+  }
+
+  /* ############ Footer CSS ############ */
+  footer {
+    position: static;
+  }
+  .footer-inner {
+    width: 100%;
+    padding: 60px 20px;
+  }
+  .footer-company-info p {
+    word-break: keep-all;
+  }
+
+  /* ############ Home Page : index.html ############ */
+  
+  /* Section: Main Slider */
+  .main-slider-item img:nth-child(1) {
+    display: none;
+  }
+  .main-slider-item img:nth-child(2) {
+    display: block;
+  }
+  /* Slick Slider Custom */
+  .main-slider-items .slick-arrow:before {
+    display: none;
+  }
+
+  /* Section: Intro */
+  .intro-headline h2 {
+    font-size: 22px;
+  }
+  .intro-headline h2 br {
+    display: none;
+  }
+  .intro-items {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .intro-item a {
+    width: 80%;
+  }
+  .intro-item span {
+    font-size: 17px;
+  }
+
+  /* Section: Always */
+  .always-headline h1 {
+    font-size: 60px;
+  }
+  .always-headline h2 {
+    font-size: 22px;
+  }
+  .always-headline h2 br {
+    display: none;
+  }
+  .always-items {
+    flex-direction: column;
+  }
+  .always-item p {
+    font-size: 15px;
+    word-break: keep-all;
+  }
+
+  /* Section: Expert */
+  /* Expert */
+  .expert-items {
+    flex-direction: column;
+  }
+  .expert-item h3 {
+    font-size: 20px;
+  }
+  /* Tel */
+  .tel-items {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .tel-item img {
+    height: 55px;
+  }
+  .tel-item span {
+    font-size: 15px;
+  }
+  /* Partner */
+  .partner-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ############ Home Page : notice.html ############ */
+
+  /* Section: Notice */
+  .notice-items {
+    flex-direction: column;
+  }
+
+  /* ############ Introduce Page : greeting.html ############ */
+
+  /* Section: Greeting */
+  .greeting-items {
+    flex-direction: column;
+  }
+
+  /* Section: Mission */
+  .mission-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: none;
+  }
+  .mission-title span {
+    font-size: 32px;
+  }
+  .mission-title span b {
+    font-size: 30px;
+  }
+
+  /* Section: Map */
+  .map-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* ############ Introduce Page : history.html ############ */
+
+  /* Section: History */
+  .history-items {
+    flex-direction: column;
+  }
+
+  /* ############ Introduce Page : license.html ############ */
+
+  /* Section : License */
+  .license-items {
+    flex-direction: column;
+  }
+
+  /* ############ Business Page : fire-safety.html ############ */
+
+  /* Section: Fire Safety */
+  .fire-safety-items {
+    flex-direction: column;
+  }
+  /* Section: Fire Inspect */
+  .fire-inspect-items {
+    flex-direction: column;
+  }
+  /* Section: Fire Construct */
+  .fire-construct-items {
+    flex-direction: column;
+  }
+
+  /* ############ Business Page : welfare.html ############ */
+
+  /* Section: Welfare */
+  .welfare-items {
+    flex-direction: column;
+  }
+  .welfare-poster-item img {
+    width: 100%;
+  }
+
+  /* Section: Service */
+  .service-items {
+    flex-direction: column;
+  }
+
+  /* Section: Visit */
+  .visit-items {
+    flex-direction: column;
+  }
+
+  /* Section: Cost */
+  /* Table CSS */
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  .cost-table {
+    table-layout: fixed;
+  }
+  .cost-table tr th,
+  .cost-table tr td {
+    border: 1px solid #e7e7e7;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+  }
+  .table-caption em {
+    display: block;
+    font-size: 13px;
+    color: #555;
+  }
+
+  /* ############ Performance Page : performance-outcome.html ############ */
+
+  /* Section: Performance List */
+  .performance-list-items {
+    flex-direction: column;
+  }
+
+  /* ############ Estimate Page : fire-estimate.html, home-care.html, recruit.html ############ */
+  
+  /* Form Common CSS */
+  .form-headline span {
+    font-size: 14px;
+  }
+  .form-headline h5 {
+    font-size: 16px;
+  }
+  .input-field.row-field {
+    flex-direction: column;
+  }
+  
+}
