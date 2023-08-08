@@ -1,8 +1,8 @@
-$(function () {
+$(function(){
   /* Main Slider */
   const slider = $('.main-slider-items');
 
-  slider.on('init', function () {
+  slider.on('init', function(){
     $('.main-slider-item img').css('transform', 'scale(1)');
     $('.main-slider-item img').css('transition', 'transform 20s');
   });
@@ -29,28 +29,28 @@ $(function () {
     $('.main-slider-items .slick-current img').css('transform', 'scale(1.2)');
   });
 
-  slider.on('click', '.slick-next', function () {
+  slider.on('click', '.slick-next', function(){
     slider.slick('slickPlay');
   });
-  slider.on('click', '.slick-prev', function () {
+  slider.on('click', '.slick-prev', function(){
     slider.slick('slickPlay');
   });
 
   /* Scroll Top Button */
-  $(window).scroll(function () {
+  $(window).scroll(function(){
     if ($(this).scrollTop() > 500) {
       $('.scroll-top').fadeIn(200);
     } else {
       $('.scroll-top').fadeOut(200);
     }
   });
-  $('.scroll-top').click(function () {
+  $('.scroll-top').click(function(){
     $('html, body').animate({scrollTop: 0}, 500);
   });
 
   /* ######## Responsive Jquery ######## */
   /* Hamburger Button */
-  $('.hamburger-btn').click(function () {
+  $('.hamburger-btn').click(function(){
     $('.gnb').stop().slideToggle(300);
     $(this).toggleClass('active');
   })

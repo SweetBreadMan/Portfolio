@@ -1,4 +1,4 @@
-$(function () {
+$(function(){
   /* Scroll Events */
   $(window).scroll(function(){
     if($(window).scrollTop() > 90){
@@ -14,7 +14,7 @@ $(function () {
   $('.accordion-title').eq(0).addClass('active');
   $('.accordion-content').eq(0).show();
 
-  $('.accordion-title').click(function () {
+  $('.accordion-title').click(function(){
     $(this).addClass('active');
     $(this).siblings('.accordion-title').removeClass('active');
     $(this).next().slideDown();
@@ -23,7 +23,7 @@ $(function () {
 
   /* Mouse Follow Circle */
   $('.process-list-items').mousemove(function(e){
-    var $cursor = $('.cursor');
+    const $cursor = $('.cursor');
 
     $cursor.css({
       'visibility': 'visible',

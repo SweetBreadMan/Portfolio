@@ -1,4 +1,4 @@
-$(function () {
+$(function(){
   /* GNB All Button */
   $('.btn-gnb').click(function(){
     $('.gnb-all').show();
@@ -65,7 +65,7 @@ $(function () {
 
   /* Category Tab */
   $('.btn-tab').click(function(){
-    var activeTab = $(this).attr('data-tab');
+    const activeTab = $(this).attr('data-tab');
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
     $('.category-tab').removeClass('active');
