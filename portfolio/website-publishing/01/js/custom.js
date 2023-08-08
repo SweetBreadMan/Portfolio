@@ -1,6 +1,6 @@
 $(function () {
   /* Main Slider */
-  var slider = $('.main-slider-items');
+  const slider = $('.main-slider-items');
 
   slider.on('init', function () {
     $('.main-slider-item img').css('transform', 'scale(1)');

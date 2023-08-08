@@ -4,14 +4,14 @@ $('.footer-include').load('../include/footer.html')
 $('.gnb-include').load('../include/gnb.html');
 
 /* Front Event Slider */
-var $slider = $('.front-slider');
+const $slider = $('.front-slider');
 if ($slider.length) {
-  var currentSlide;
-  var slidesCount;
-  var sliderCounter = document.createElement('span');
+  let currentSlide;
+  let slidesCount;
+  const sliderCounter = document.createElement('span');
   sliderCounter.classList.add('slider-counter');
 
-  var updateSliderCounter = function (slick, currentIndex) {
+  const updateSliderCounter = function (slick, currentIndex) {
     currentSlide = slick.slickCurrentSlide() + 1;
     slidesCount = slick.slideCount;
     $(sliderCounter).text(currentSlide + ' / ' + slidesCount)
@@ -63,7 +63,7 @@ $('.btn-heart').click(function(){
 
 /* Tab Button Scroll */
 $('.tab-btn label').click(function(){
-  var tabInnerTop = $('.goods-tab-inner').offset().top - 78;
+  const tabInnerTop = $('.goods-tab-inner').offset().top - 78;
   $("html, body").animate({scrollTop: tabInnerTop}, 0);
 });
 
@@ -82,10 +82,10 @@ $('.overlay').click(function(){
 });
 
 /* Quantity-selector & Price */
-var $num = parseInt($('.quantity').text());
-var $price = $('.price-quantity b');
-var $priceFinal = $('.price-final em');
-var $quantityFinal = $('.price-final b span');
+let $num = parseInt($('.quantity').text());
+let $price = $('.price-quantity b');
+let $priceFinal = $('.price-final em');
+let $quantityFinal = $('.price-final b span');
 
 $('.minus').css('color', 'var(--placeholder)');
 
