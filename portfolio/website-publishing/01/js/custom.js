@@ -20,12 +20,12 @@ $(function(){
   })
 
   /* Main Slider Img Scale */
-  slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+  slider.on('beforeChange', function(currentSlide){
     $('.main-slider-items .slick-current img').css('transform', 'scale(1.2)');
     $('.main-slider-items .slick-slide').eq(currentSlide).find('img').css('transform', 'scale(1)');
     $('.main-slider-items .slick-slide').not('.slick-current').find('img').css('transform', 'scale(1)');
   });
-  slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+  slider.on('afterChange', function(){
     $('.main-slider-items .slick-current img').css('transform', 'scale(1.2)');
   });
 

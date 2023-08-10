@@ -1,0 +1,54 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* display none */
+  /* #intro, */
+  /* #about, */
+  /* #skill, */
+  #education,
+  #mobile,
+  #web,
+  #clone,
+  #jquery,
+  #practical,
+  #epilogue {
+    display: none;
+  }
+
+  /* Common CSS */
+  [class*=inner] {
+    width: 100%;
+    padding: 0 20px;
+    margin: auto;
+  }
+
+
+  /* ########## Section: Intro ########## */
+
+
+  /* ########## Section: About ########## */
+  #about {
+    padding: 50px 0;
+  }
+  .about-items {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  .about-detail {
+    order: 2;
+  }
+
+  /* ########## Section: Skill ########## */
+  .skill-inner {
+    padding: 0 30px;
+  }
+  .skill-wrapper {
+    
+  }
+  .skill-items {
+    flex-wrap: wrap;
+    gap: 50px 30px;
+  }
+  .skill-item {
+    flex: 2;
+  }
+}

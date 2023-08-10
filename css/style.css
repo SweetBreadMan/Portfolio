@@ -423,8 +423,8 @@ header.active {
 
 /* ########## Section: Skill ########## */
 .skill-inner {
-  width: 100%;
-  padding: 0 180px;
+  width: 1400px;
+  /* padding: 0 180px; */
 }
 .skill-wrapper {
   display: flex;
@@ -479,6 +479,12 @@ header.active {
   word-break: keep-all;
   line-height: 1.6em;
   font-size: 17px;
+}
+.skill-items:last-child {
+  
+}
+.skill-items:last-child .skill-item {
+  
 }
 
 /* ########## Section: Education ########## */
