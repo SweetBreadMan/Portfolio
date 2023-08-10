@@ -121,6 +121,9 @@
     text-align: left;
     font-size: 14px;
   }
+  .private a img {
+    width: 45px;
+  }
   .about-photo {
     margin: auto;
     width: 330px;
@@ -129,6 +132,7 @@
 
   /* ########## Section: Skill ########## */
   .skill-inner {
+    width: 100%;
     padding: 0 30px;
   }
   .skill-wrapper {
@@ -137,6 +141,9 @@
   .skill-items {
     flex-direction: column;
     gap: 60px;
+  }
+  .skill-item {
+    width: 100%;
   }
   .initial em {
     width: 60px;

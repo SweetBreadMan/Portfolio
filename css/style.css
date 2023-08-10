@@ -21,9 +21,7 @@
   --primary-font: 'Noto Sans KR', sans-serif !important;
   --slogan-font: 'Kalam', cursive !important;
   --accent-font: 'Poppins', sans-serif !important;
-
 }
-
 /* Default CSS Reset */
 * {
   font-family: var(--primary-font);
@@ -367,7 +365,7 @@ header.active {
   justify-content: space-between;
 }
 .about-detail {
-  width: 600px;
+  width: 620px;
   padding: 0 20px;
 }
 .about-detail h2,
@@ -410,6 +408,13 @@ header.active {
   color: #6C757D;
   display: block;
 }
+.private a img {
+  width: 55px;
+  transition: .3s;
+}
+.private a:hover img {
+  transform: scale(1.05);
+}
 .about-photo {
   width: 500px;
   height: 500px;
@@ -424,20 +429,21 @@ header.active {
 /* ########## Section: Skill ########## */
 .skill-inner {
   width: 1400px;
-  /* padding: 0 180px; */
 }
 .skill-wrapper {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 70px;
   margin-top: 100px;
 }
 .skill-items {
   display: flex;
+  justify-content: center;
   gap: 30px;
 }
 .skill-item {
-  flex: 1;
+  width: 25%;
   background-color: #fff;
   border-radius: 10px;
   padding: 0 20px;
@@ -480,12 +486,6 @@ header.active {
   line-height: 1.6em;
   font-size: 17px;
 }
-.skill-items:last-child {
-  
-}
-.skill-items:last-child .skill-item {
-  
-}
 
 /* ########## Section: Education ########## */
 .education-item {
@@ -505,8 +505,8 @@ header.active {
   height: 10px;
   border-radius: 50%;
   background-color: var(--primary-color);
-  right: -3%;
-  top: 16%;
+  right: -5px;
+  top: 30px;
 }
 .education-date span {
   font-size: 16px;
@@ -795,7 +795,7 @@ header.active {
   display: flex;
   gap: 20px;
 }
-.clone-items>div {
+.clone-items > div {
   flex: 1;
 }
 .favicons {
@@ -844,7 +844,7 @@ header.active {
   top: 0;
   transition: 1s;
 }
-.clone-item:hover .photo img {
+.clone-item .photo:hover img {
   object-position: bottom;
 }
 .clone-item b {
