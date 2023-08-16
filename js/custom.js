@@ -3,10 +3,10 @@ $(function(){
   $(window).scroll(function(){
     if ($(window).scrollTop() > 70) {
       $('header, .logo h4, .btn-trigger span').addClass('change');
-      $('.gototop').fadeIn();
+      $('.gototop').addClass('scroll');
     } else {
       $('header, .logo h4, .btn-trigger span').removeClass('change');
-      $('.gototop').fadeOut();
+      $('.gototop').removeClass('scroll');
     }
   })
 

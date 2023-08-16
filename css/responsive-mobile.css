@@ -16,7 +16,7 @@
   }
   /* Section Title */
   .section-title div {
-    padding: 5px 15px;
+    padding: 8px 20px;
     font-size: 24px;
   }
   .section-title h3 {
@@ -29,12 +29,23 @@
   }
   /* Slogan */
   .slogan {
-    font-size: 22px;
+    display: inline-block;
+    font-size: 24px;
+    margin-top: 0px;
     margin-bottom: 20px;
   }
   .slogan:before {
     font-size: 20px;
-    left: 0px;
+    left: -18px;
+  }
+  .epilogue-summary .slogan {
+    margin-top: 30px;
+  }
+  .epilogue-summary .slogan:before {
+    left: -20px;
+  }
+  .epilogue-summary .slogan br {
+    display: none;
   }
   /* Button View */
   .btn-view {
@@ -184,6 +195,11 @@
     border: none;
     padding: 0;
   }
+  .education-photo-detail .photo {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+  }
   .education-photo-detail .detail {
     flex: 1;
   }
@@ -247,6 +263,9 @@
   }
   .mobile-buttons {
     justify-content: center;
+  }
+  .mobile-buttons .btn-view {
+    flex: 1;
   }
 
   /* ########## Section: Web ########## */

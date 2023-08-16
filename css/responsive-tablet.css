@@ -12,7 +12,6 @@
 
   /* ########## Header CSS ########## */
   header.change {
-    background-color: #fff;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
   }
 
@@ -100,6 +99,92 @@
   }
   .clone-buttons button {
     padding: 7px 20px;
+  }
+
+  /* ########## Section: Practical ########## */
+
+  /* UIkit Slider Custom CSS */
+  .practical-slider .uk-slider-nav {
+    visibility: visible;
+    opacity: 1;
+  }
+  .practical-slider .uk-slider-nav .uk-active a {
+    background-color: var(--primary-color);
+  }
+  .practical-slider .uk-visible\@s {
+    display: none;
+  }
+}
+@media(min-width: 1023px) and (max-width: 1385px) {
+  /* ########## Section: Skill ########## */
+  .skill-inner {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .skill-items {
+    flex-wrap: wrap;
+    gap: 50px 30px;
+  }
+  .skill-item {
+    width: 35%;
+  }
+  .clone-info span b {
+    display: block;
+  }
+  /* ########## Section: Clone ########## */
+
+}
+
+@media(min-width: 1023px) and (max-width: 1620px) {
+  /* Common CSS */
+  [class*=inner] {
+    width: 100%;
+    padding: 0 20px;
+    margin: auto;
+  }
+  /* Section Padding */
+  section:not(#intro) {
+    padding: 50px 0;
+  }
+  /* ########## Section: Mobile ########## */
+  .mobile-items {
+    flex-direction: column;
+  }
+  .mobile-items .photo {
+    margin: auto;
+  }
+  /* ########## Section: Web ########## */
+  .web-items {
+    flex-direction: column;
+  }
+  .tab-btn {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .web-tab .photo {
+    width: 70%;
+    margin: auto;
+  }
+  .web-tab .photo img {
+    width: 100%;
+  }
+  .web-tab .detail {
+    width: 100%;
+  }
+  /* Web Tab Control */
+  .web-items input[id=web-tab1]:checked~.web-tabs .ngo-tab,
+  .web-items input[id=web-tab2]:checked~.web-tabs .company-tab,
+  .web-items input[id=web-tab3]:checked~.web-tabs .shopping-tab,
+  .web-items input[id=web-tab4]:checked~.web-tabs .request-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .web-info {
+    margin: 20px 0;
   }
 
   /* ########## Section: Practical ########## */

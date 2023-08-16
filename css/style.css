@@ -68,7 +68,7 @@ a:hover {
   margin: auto;
 }
 /* Section Padding */
-section:not(#intro, #about, #mobile) {
+section:not(#intro, #about) {
   padding: 100px 0;
 }
 /* Section Background Color */
@@ -198,7 +198,8 @@ header.active {
   top: 50%;
   right: 0;
   width: 25px;
-  height: 2px;
+  height: 3px;
+  border-radius: 30px;
   background-color: #fff;
   transition: .3s;
 }
@@ -605,7 +606,7 @@ header.active {
   font-size: 30px;
   font-weight: bold;
 }
-.mobile-items .detail>p {
+.mobile-items .detail > p {
   color: #777;
   font-size: 16px;
 }
@@ -768,7 +769,6 @@ header.active {
 .web-info-wrapper span {
   flex: 2;
   color: #777;
-  word-break: keep-all;
 }
 .web-colors {
   flex: 2;
@@ -783,7 +783,7 @@ header.active {
 .web-items input[id=web-tab1]:checked~.web-tabs .ngo-tab,
 .web-items input[id=web-tab2]:checked~.web-tabs .company-tab,
 .web-items input[id=web-tab3]:checked~.web-tabs .shopping-tab,
-.web-items input[id=web-tab4]:checked~.web-tabs .renewal-tab {
+.web-items input[id=web-tab4]:checked~.web-tabs .request-tab {
   display: flex;
   gap: 50px;
 }
@@ -913,7 +913,7 @@ header.active {
   z-index: -1;
 }
 /* UIkit Slider Custom CSS */
-.practical-slider .uk-slider-items>li a {
+.practical-slider .uk-slider-items > li a {
   display: block;
   border: 2px solid #d3d3d3;
 }
@@ -922,8 +922,32 @@ header.active {
   opacity: 0;
 }
 .practical-slider .uk-icon {
-  display: block !important;
-  color: var(--primary-color);
+  display: block;
+  position: absolute;
+}
+.practical-slider .uk-icon:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  background: url('../images/icons/right-arrow-light.png');
+  background-position: center center;
+  background-size: cover;
+  transition: 0.3s;
+}
+.practical-slider .uk-icon:hover:after {
+  background: url('../images/icons//right-arrow.png');
+  background-position: center center;
+  background-size: cover;
+}
+.practical-slider .uk-icon svg {
+  display: none;
+}
+.practical-slider .uk-slidenav-previous:after {
+  transform: translate(-50%, -50%) rotate(180deg);
 }
 
 /* UIkit Light Box Custom CSS */
@@ -1034,14 +1058,21 @@ header.active {
   border-radius: 50%;
   right: 40px;
   bottom: 40px;
-  font-size: 30px;
-  background-color: #fff;
   border: 3px solid var(--primary-color);
-  color: var(--primary-color);
-  display: none;
+  background: url('../images/icons/right-arrow.png') no-repeat center center #fff;
+  background-size: 28px 28px;
+  transform: rotate(-90deg);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
 }
 .gototop:hover {
   background-color: var(--primary-color);
+  background: url('../images/icons/right-arrow-white.png') no-repeat center center var(--primary-color);
+  background-size: 28px 28px;
   border: 3px solid transparent;
-  color: #fff;
+}
+.gototop.scroll {
+  visibility: visible;
+  opacity: 1;
 }
