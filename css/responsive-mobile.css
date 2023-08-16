@@ -365,6 +365,7 @@
   .practical-slider .uk-slider-nav .uk-active a {
     background-color: var(--primary-color);
   }
+  .practical-slider .uk-visible\@s,
   .practical-slider .uk-hidden\@s {
     display: none;
   }
