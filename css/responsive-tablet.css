@@ -77,7 +77,7 @@
   .web-items input[id=web-tab1]:checked~.web-tabs .ngo-tab,
   .web-items input[id=web-tab2]:checked~.web-tabs .company-tab,
   .web-items input[id=web-tab3]:checked~.web-tabs .shopping-tab,
-  .web-items input[id=web-tab4]:checked~.web-tabs .renewal-tab {
+  .web-items input[id=web-tab4]:checked~.web-tabs .request-tab {
     display: flex;
     flex-direction: column;
     gap: 30px;
