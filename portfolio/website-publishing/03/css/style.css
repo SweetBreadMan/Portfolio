@@ -534,9 +534,6 @@ nav.fixed {
   object-fit: cover;
   transition: .3s;
 }
-.hot-item .link-item:hover .thum img {
-  transform: scale(1.05);
-}
 .hot-item-info {
   display: flex;
   flex-direction: column;
