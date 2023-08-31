@@ -69,17 +69,28 @@
   }
 
   /* ########## Section: Intro ########## */
+  #intro {
+    height: 100vh;
+    background-position: center center;
+    background-size: fill;
+  }
   .intro-inner {
     justify-content: center;
   }
   .intro-headline {
+    min-width: 90%;
+    border: 6px solid #fff;
     text-align: center;
   }
   .intro-headline h2 {
-    font-size: 30px;
+    display: inline-block;
+    font-size: 50px;
   }
-  .intro-headline h1 {
-    font-size: 40px;
+  .intro-headline h2 br {
+    display: none;
+  }
+  .intro-headline h3 {
+    font-size: 20px;
   }
   .btn-view-project {
     font-size: 16px;

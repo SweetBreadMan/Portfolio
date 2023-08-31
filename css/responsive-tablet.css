@@ -15,6 +15,21 @@
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
   }
 
+  /* ########## Section: Intro ########## */
+  .intro-headline {
+    min-width: 460px;
+  }
+  .intro-headline h2 {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 1.1em;
+    margin: 0;
+  }
+  .intro-headline h3 {
+    font-size: 30px;
+    margin: 0;
+  }
+
   /* ########## Section: About ########## */
   .about-items {
     flex-direction: column;
@@ -116,6 +131,17 @@
   }
 }
 @media(min-width: 1023px) and (max-width: 1385px) {
+  /* ########## Section: Intro ########## */
+  .intro-headline h2 {
+    font-size: 80px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .intro-headline h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+
   /* ########## Section: Skill ########## */
   .skill-inner {
     width: 100%;
